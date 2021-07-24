@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "tajukplus-hybrid",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
