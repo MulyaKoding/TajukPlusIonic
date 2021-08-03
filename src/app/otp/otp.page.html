@@ -1,0 +1,27 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="header-section">
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/register">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-label class="navigation">OTP</ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding fixed>
+  <div class="content-section">
+    <img src="assets/logo/logo.png"/>
+    <p>Masukkan Kode dari SMS<br/>Kode Telah dikirim ke Nomor<br/><span class="phone-num">{{ navData.phone }}</span></p>
+    <form>
+      <div class="input-wrapper">
+        <ion-input #i1 type="tel" maxlength="1" name="v1" (keyup)="keytab($event, i2, i1)" [(ngModel)]="postData.v1"></ion-input>
+        <ion-input #i2 type="tel" maxlength="1" name="v2" (keyup)="keytab($event, i3, i1)" [(ngModel)]="postData.v2"></ion-input>
+        <ion-input #i3 type="tel" maxlength="1" name="v3" (keyup)="keytab($event, i4, i2)" [(ngModel)]="postData.v3"></ion-input>
+        <ion-input #i4 type="tel" maxlength="1" name="v4" (keyup)="keytab($event, i4, i3)" [(ngModel)]="postData.v4"></ion-input>
+      </div>
+      <ion-anchor class="anchor-resend" routerLink="#">Kirim Ulang ?</ion-anchor>
+      <ion-button class="btn-kirim" (click)="matchOtp()">Kirim</ion-button>
+    </form>
+  </div>
+</ion-content>

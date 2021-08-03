@@ -1,0 +1,14 @@
+<svg id="Homeicon_active" data-name="Homeicon active" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.805" height="25.808" viewBox="0 0 25.805 25.808">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.315" y1="0.363" x2="0.881" y2="0.976" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#35bfed"/>
+      <stop offset="1" stop-color="#55bf30"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.46" y1="0.407" x2="0.819" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4dc2ac"/>
+      <stop offset="1" stop-color="#c8e542"/>
+    </linearGradient>
+  </defs>
+  <path id="Path_51" data-name="Path 51" d="M35.034,817.9c11.856-11.2,11.3-11.04,11.3-11.04H47.2l.952.4.685.688L59.046,818.27v1.624l-1.552.712H56.323v9.322l-.877.9-1.529.546-3.848-.279v-6.9l-1.23-1.059H44.933l-1.346,1.449v6.785l-4.8-.279-1.226-.936v-9.551H35.313l-.54-1.308Z" transform="translate(-34.099 -806.096)" opacity="0.434" fill="url(#linear-gradient)"/>
+  <path id="_1946488" data-name="1946488" d="M25.611,11.225l0,0L15.082.7a2.376,2.376,0,0,0-3.36,0L1.2,11.218l-.011.011A2.375,2.375,0,0,0,2.77,15.276c.024,0,.049,0,.073,0h.419v7.747a2.784,2.784,0,0,0,2.781,2.781h4.119a.756.756,0,0,0,.756-.756V18.978a1.27,1.27,0,0,1,1.269-1.269h2.429a1.27,1.27,0,0,1,1.269,1.269v6.074a.756.756,0,0,0,.756.756H20.76a2.784,2.784,0,0,0,2.781-2.781V15.28h.389a2.376,2.376,0,0,0,1.681-4.055Zm-1.071,2.29a.858.858,0,0,1-.611.253H22.785a.756.756,0,0,0-.756.756v8.5A1.27,1.27,0,0,1,20.76,24.3H17.4V18.978A2.784,2.784,0,0,0,14.617,16.2H12.187a2.784,2.784,0,0,0-2.781,2.781V24.3H6.044a1.27,1.27,0,0,1-1.269-1.268v-8.5a.756.756,0,0,0-.756-.756H2.894l-.035,0a.863.863,0,0,1-.595-1.473h0L12.792,1.765a.863.863,0,0,1,1.221,0L24.537,12.29l0,0A.866.866,0,0,1,24.541,13.515Zm0,0" transform="translate(-0.499 0)" fill="url(#linear-gradient-2)"/>
+</svg>

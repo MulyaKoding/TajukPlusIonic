@@ -1,20 +1,90 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div class="header-section">
+    <ion-img src="assets/logo/logo-white.png"></ion-img>
   </div>
+
+  <ion-slides class="carousel">
+    <ion-slide>
+      <img src="assets/images/article/sample-img4.jpg" class="carousel-img">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/article/sample-img.png" class="carousel-img">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/article/sample-img3.jpg" class="carousel-img">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid class="segment-wrapper">
+    <ion-row>
+      <ion-col>
+        <ion-button fill="clear" class="btn-segment">
+          <ion-icon name="video" class="segment-icon1"></ion-icon>
+          <ion-label class="segment-label">video</ion-label>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button fill="clear" class="btn-segment">
+          <ion-icon name="news" class="segment-icon2"></ion-icon>
+          <ion-label class="segment-label">news</ion-label>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button fill="clear" class="btn-segment" href="/login">
+          <ion-icon name="login-register" class="segment-icon3"></ion-icon>
+          <ion-label class="segment-label">login / register</ion-label>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-label class="newspaper-title">
+    News Terbaru
+    <div class="newspaper-borderline"></div>
+  </ion-label>
+
+  <div class="tag-wrapper">
+    <ion-button class="tag-btn">terbaru</ion-button>
+    <ion-button class="tag-btn">rekomendasi</ion-button>
+  </div>
+
+  <ion-card class="art-card">
+    <div class="art-img-wrapper">
+      <img src="assets/images/article/art2.jpeg" class="art-img">
+    </div>
+    <ion-card-content>
+      <p class="art-text-title">Sandiaga Dukung PPKM Darurat, Destinasi Wisata Tutup Sementara</p>
+      <p class="art-text-content">Kebijakan Pemberlakuan Pembatasan Kegiatan Masyarakat (PPKM) Darurat yang ditetapkan sejak 3-20 Juli 2021...</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="art-card">
+    <div class="art-img-wrapper">
+      <img src="assets/images/article/art1.jpeg" class="art-img">
+    </div>
+    <ion-card-content>
+      <p class="art-text-title">Pandemi Covid-19, Program Sejuta Rumah Tetap Berjalan Tembus 312.290 Unit</p>
+      <p class="art-text-content">Pandemi Covid-19 di Indonesia tidak menyurutkan semangat Kementerian PUPR bersama pemangku...</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="art-card">
+    <div class="art-img-wrapper">
+      <img src="assets/images/article/art3.png" class="art-img">
+    </div>
+    <ion-card-content>
+      <p class="art-text-title">Kelompok ini Meminjamkan Tabung Oksigen Gratis untuk yang Isoman</p>
+      <p class="art-text-content">Peningkatan jumlah pasien COVID-19 berbanding lurus dengan meningkatnya kebutuhan tabung oksigen, terutama...</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="art-card">
+    <div class="art-img-wrapper">
+      <img src="assets/images/article/sample-img.png" class="art-img">
+    </div>
+    <ion-card-content>
+      <p class="art-text-title">Lorem Ipsum is simply</p>
+      <p class="art-text-content">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

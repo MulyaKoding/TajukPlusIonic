@@ -1,0 +1,22 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="header-section">
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/login">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-label class="navigation">daftar</ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="content-section">
+    <img src="assets/logo/logo.png"/>
+
+    <form>
+      <ion-input type="tel" name="nohp" placeholder="No. Handphone" [(ngModel)]="data.phone"></ion-input>
+      <ion-anchor routerLink='/lupa-password'>Lupa Password ?</ion-anchor>
+      <ion-button class="btn-signup" expand="block" (click)="gotoOtp()">Lanjutkan</ion-button>
+    </form>
+  </div>
+</ion-content>

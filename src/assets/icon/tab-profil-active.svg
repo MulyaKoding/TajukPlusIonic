@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.868" height="27.601" viewBox="0 0 24.868 27.601">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.793" y1="-0.108" x2="0.027" y2="1.399" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4dc2ac" stop-opacity="0.447"/>
+      <stop offset="1" stop-color="#c8e542" stop-opacity="0.506"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1.047" y1="-0.122" x2="-0.195" y2="1.186" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4dc2ac" stop-opacity="0.533"/>
+      <stop offset="1" stop-color="#c8e542" stop-opacity="0.525"/>
+    </linearGradient>
+  </defs>
+  <g id="Icon_feather-user" data-name="Icon feather-user" transform="translate(-9.5 -1)">
+    <path id="Path_2" data-name="Path 2" d="M27.868,30.7V27.967A5.467,5.467,0,0,0,22.4,22.5H11.467A5.467,5.467,0,0,0,6,27.967V30.7" transform="translate(5 -3.599)" stroke="#8ed473" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" fill="url(#linear-gradient)"/>
+    <path id="Path_3" data-name="Path 3" d="M22.934,9.967A5.467,5.467,0,1,1,17.467,4.5a5.467,5.467,0,0,1,5.467,5.467Z" transform="translate(4.467 -2)" stroke="#8ed473" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>

@@ -1,0 +1,142 @@
+ion-icon {
+    color: white;
+}
+  
+ion-content {
+    z-index: 10;
+    position: absolute;
+    --background: rgba(1, 1, 1, 0);
+}
+  
+.header-section {
+    --background: linear-gradient(to bottom left, #3DBDCF, #55BF30);
+    padding-bottom: 50%;
+    z-index: 1;
+}
+  
+.content-section {
+    margin-top: 30%;
+    background-color: white;
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 50px 50px 0px 0px;
+}
+  
+.navigation {
+    --color: white;
+    text-transform: capitalize;
+}
+  
+img {
+    width: 150px;
+    margin-bottom: 30px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+  
+ion-anchor {
+    transition: all 500ms ease-in-out;
+    display: block;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(117, 117, 117);
+}
+  
+ion-anchor:hover {
+    border: 2px;
+    border-color: #F00;
+    color: #fff679;
+}
+
+.label-section {
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.label-borderline {
+    margin-top: 2px;
+    background-color: #3DBDCF;
+    height: 3px;
+    width: 60px;
+    margin-top: -12px;
+    margin-bottom: 15px;
+}
+  
+ion-input[type=number] {
+    margin-top: 35px;
+}
+  
+ion-input {
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: rgba(231, 231, 231, 0.5);
+    text-indent: 20px;
+    transition: all 400ms ease-out;
+}
+  
+ion-input:hover {
+    box-shadow: 0px 0px 4px #3DBDCF, 0px 0px 4px #55BF30;
+}
+
+.btn-signup {
+    --background:#3DBDCF;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-login {
+    width: 45%;
+    --background:#3DBDCF;
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+}
+
+ion-select {
+    margin-bottom: 20px;
+    padding: 5px;
+    height: 38px;
+    border-radius: 20px;
+    background-color: rgba(231, 231, 231, 0.5);
+    text-indent: 20px;
+    transition: all 400ms ease-out;
+}
+
+.checkbox-section {
+    align-items: baseline;
+    width: 100%;
+    --padding-start: 0;
+}
+
+.cb-trigger {
+    --border-radius: 5px;
+    --border-width: 1px;
+    --size: 15px;
+    --background-checked: #3DBDCF;
+    --checkmark-color: white;
+    --border-color-checked: #3DBDCF;
+    margin-right: 20px;
+    margin-top: 0;
+    left: 4%;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+.cb-agree {
+    margin-top: 0;
+    font-size: 15px;
+    --word-wrap: break-word;
+    white-space: normal;
+    line-height: 21px
+}
+
+.cb-anchor {
+    color: #3DBDCF;
+    text-decoration: none;
+    font-weight: 700;
+}

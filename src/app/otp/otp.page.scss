@@ -1,0 +1,103 @@
+ion-icon {
+    color: white;
+}
+
+ion-content {
+    z-index: 10;
+    position: absolute;
+    top: 15vh;
+    --background: rgba(1, 1, 1, 0);
+}
+  
+.header-section {
+    --background: linear-gradient(to bottom left, #3DBDCF, #55BF30);
+    padding-bottom: 50%;
+    z-index: 1;
+}
+  
+.content-section {
+    background-color: white;
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 50px 50px 0px 0px;
+}
+  
+.navigation {
+    color: white;
+    text-transform: capitalize;
+}
+
+img {
+    width: 150px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+p {
+    color: #747474;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 35px;
+    padding-left: 8vw;
+}
+
+.phone-num {
+    font-weight: 700;
+}
+
+.input-wrapper {
+    width: fit-content;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ion-input {
+    width: 14vw;
+    height: 14vw;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-color: black;
+    border-radius: 10px;
+    border: black;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    background-color: white;
+    transition: all 400ms ease-out;
+}
+
+.anchor-resend {
+    transition: all 500ms ease-in-out;
+    display: block;
+    margin-top: 25 px;
+    text-align: center;
+    font-weight: 500;
+    color: black;
+}
+
+.anchor-resend:hover {
+    border: 2px;
+    color: #3DBDCF;
+}
+
+.btn-kirim {
+    --background:#3DBDCF;
+    --border-radius: 8px;
+    --box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.5);
+    width: 90vw;
+    margin-right: calc(50vw - 45vw - 15px);
+    margin-left: calc(50vw - 45vw - 15px);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    position: fixed;
+    bottom: 0;
+}

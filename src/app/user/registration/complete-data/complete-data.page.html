@@ -1,0 +1,58 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="header-section">
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/login">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button class="navigation">Kelengkapan Data</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="content-section">
+    <img src="assets/logo/logo.png"/>
+
+    <form [formGroup]="submitUser" (ngSubmit)="submitForm()" novalidate>
+      <ion-label class="label-section">
+        Informasi Data
+        <div class="label-borderline"></div>
+      </ion-label>
+      <ion-input type="text" formControlName="nama" placeholder="Nama Lengkap"></ion-input>
+      <ion-input type="text" formControlName="username" placeholder="Username"></ion-input>
+      <ion-input type="email" formControlName="email" placeholder="Email"></ion-input>
+      <ion-input type="phone" formControlName="phone" placeholder="Phone" readonly></ion-input>
+      <ion-input type="text" formControlName="noktp" placeholder="No KTP"></ion-input>
+      
+      <ion-label class="label-section">
+        Informasi Alamat
+        <div class="label-borderline"></div>
+      </ion-label>
+      <ion-select placeholder="Provinsi" formControlName="provinsi">
+        <ion-select-option value="np">nama_provinsi</ion-select-option>
+      </ion-select>
+      <ion-select placeholder="Kota" formControlName="kota">
+        <ion-select-option value="nko">nama_kota</ion-select-option>
+      </ion-select>
+      <ion-select placeholder="Kecamatan" formControlName="kecamatan">
+        <ion-select-option value="nke">nama_kecamatan</ion-select-option>
+      </ion-select>
+      <ion-input type="text" formControlName="alamat" placeholder="Alamat Lengkap"></ion-input>
+      
+      <ion-label class="label-section">
+        Password
+        <div class="label-borderline"></div>
+      </ion-label>
+      <ion-input type="password" formControlName="password" placeholder="Password"></ion-input>
+      <ion-input type="password" formControlName="confirmpass" placeholder="Konfirmasi Password"></ion-input>
+      
+      <ion-item class="checkbox-section" lines="none">
+        <ion-checkbox formControlName="checktc" class="cb-trigger"></ion-checkbox>
+        <ion-label class="cb-agree">Saya telah menyetujui <a href="" class="cb-anchor">Syarat & Ketentuan</a> Serta <a href="" class="cb-anchor">Kebijakan Privasi</a> yang Berlaku</ion-label>
+      </ion-item>
+      <ion-button type="submit" class="btn-signup" expand="block">Daftar</ion-button>
+    </form>
+  </div>
+</ion-content>
