@@ -1,0 +1,80 @@
+ion-icon {
+    color: black;
+}
+  
+ion-content {
+    z-index: 1;
+    position: absolute;
+    --background: rgba(1, 1, 1, 0);
+}
+  
+.header-section {
+    padding-bottom: 2%;
+    z-index: 10;
+}
+  
+.navigation {
+    --color: black;
+    text-transform: capitalize;
+}
+
+.data-img-bckgrnd {
+  margin-top: 80px;
+  height: 185px;
+  width: 350px;
+  border-radius: 20px 20px 20px 20px; 
+}
+
+ion-chip {
+  margin-top: 2%;
+  margin-left:3%
+}
+
+.topic {
+  background: linear-gradient(#3DBDCF, #55BF30);
+  color: white;
+}
+
+.title-news {
+  font-weight: bold;
+  text-align: left;
+  margin-left: 4%;
+}
+
+.img-profil {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-left: 4%;
+  float: left;
+}
+
+.profil-image {
+  margin-left: 12%;
+  margin-top: 0%;
+  padding-top: 3px;
+  padding-bottom: 0%;
+  float: center;
+  font-size: 11px;
+}
+
+.content-time {
+  font-size: 12px;
+  margin-left: 4%;
+}
+
+.icon-share {
+  margin-left: 30%
+}
+
+.icon-eye{
+margin-left: 4%
+}
+
+.icon-heart{
+margin-left: 4%;
+}
+
+.icon-chat{
+  margin-left: 4%;
+}

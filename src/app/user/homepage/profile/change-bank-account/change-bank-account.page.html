@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar class="header-section">
+    <ion-buttons slot="start">
+      <ion-button color="primary">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button class="navigation" href="/">Ubah Rekening</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-section">
+    <ion-card class="profil-card">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="bank-user">
+            <ion-row>
+              <ion-label class="bank-anda">Bank Anda</ion-label>
+            </ion-row>
+            <br>
+            <ion-row>
+              <ion-label class="bank-name">BCA</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label class="rekening-bank">12345678910</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label class="name-user">John Doe</ion-label>
+            </ion-row>
+          </ion-col>
+          <ion-col class="image">
+            <img src="assets/icon/ubahrekening/money.JPG"/>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    <br>
+    <form>
+      <ion-label class="informasi-data-title">Data Bank</ion-label>
+      <div class="informasi-data-border"></div>
+      <br>
+      <ion-input type="text" name="namapemilikbank" placeholder="Nama Pemilik Bank"></ion-input>
+      <ion-input type="text" name="rekeningbank" placeholder="No Rekening Bank"></ion-input>
+      <ion-select placeholder="Nama Bank" interface="popover">
+        <ion-select-option value="nes">BCA</ion-select-option>
+        <ion-select-option value="n64">BNI</ion-select-option>
+        <ion-select-option value="ps">Mandiri</ion-select-option>
+        <ion-select-option value="genesis">BTN</ion-select-option>
+        <ion-select-option value="saturn"> BRI</ion-select-option>
+        <ion-select-option value="snes">Bukopin</ion-select-option>
+        <br><br>
+      </ion-select>
+      <br><br>
+      <ion-select  [(ngModel)]="kota" placeholder="Pilih Kota" name="provinsi">
+        <ion-select-option value="nko">Nama Kota</ion-select-option>
+      </ion-select>
+      <ion-select [(ngModel)]="kecamatan" placeholder="Pilih Kecamatan" name="provinsi">
+        <ion-select-option value="nke">Nama Kecamatan</ion-select-option>
+      </ion-select>
+      <br><br>
+      <ion-button class="btn-ubh-profil" expand="block" (click)="registerAction()">Ubah Profil</ion-button>
+
+      <ion-list>
+        <ion-item *ngfor="kota">
+          <ion-label>
+            {{kota}}
+          </ion-label>
+        </ion-item>
+
+        <ion-item *ngfor="kota">
+          <ion-label>
+            {{kecamatan}}
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </form>
+  </div>
+</ion-content>

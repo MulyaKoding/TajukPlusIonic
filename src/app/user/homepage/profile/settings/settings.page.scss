@@ -1,0 +1,47 @@
+p {
+    margin-left: 20px;
+}
+  
+ion-icon {
+    color: black;
+}
+  
+.navigation {
+    --color: black;
+    text-transform: capitalize;
+}
+  
+ion-toggle {
+    --handle-background: grey;
+    --handle-background-checked: #4db6ac;
+    --handle-box-shadow: 24px 24px 44px 44px #4db6ac;  
+}
+  
+.notifikasi-border {
+    margin-top: 6px;
+    margin-left: 5%;
+    background-image: linear-gradient(#3DBDCF, #55BF30);
+    height: 3px;
+    width: 14%;
+}
+  
+.umum-border {
+    margin-top: 6px;
+    margin-left: 5%;
+    background-image: linear-gradient(#3DBDCF, #55BF30);
+    height: 3px;
+    width: 14%;
+}
+  
+.notifikasi-terbaru-title {
+    margin-left: 5%;
+    font-size: 15px;
+    font-weight: 700;
+}
+  
+.umum-title {
+    margin-left: 5%;
+    font-size: 15px;
+    font-weight: 700;
+}
+  

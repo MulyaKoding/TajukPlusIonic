@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button class="navigation" routerLink="/">Ubah Profil</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div class="content-section">
+    <form>
+      <ion-label class="informasi-data-title">Informasi Data</ion-label>
+      <div class="informasi-data-border"></div>
+      <ion-input type="text" name="fullname" placeholder="Username"></ion-input>
+      <ion-input type="email" name="email" placeholder="Email"></ion-input>
+      <ion-input type="phone" name="phone" placeholder="Phone"></ion-input>
+      <ion-input type="text" name="nik" placeholder="NIK"></ion-input>
+      <ion-select placeholder="Pilih Provinsi" name="provinsi">
+        <ion-select-option value="np">Nama Provinsi</ion-select-option>
+      </ion-select>
+      <ion-select placeholder="Pilih Kota" name="provinsi">
+        <ion-select-option value="nko">Nama Kota</ion-select-option>
+      </ion-select>
+      <ion-select placeholder="Pilih Kecamatan" name="provinsi">
+        <ion-select-option value="nke">Nama Kecamatan</ion-select-option>
+      </ion-select>
+      <ion-button class="btn-ubh-profil" expand="block" (click)="registerAction()">Ubah Profil</ion-button>
+      <ion-label class="Ganti-Password-title">Ganti Password</ion-label>
+      <div class="Ganti-Password-border"></div>
+      <ion-input type="password" name="passwordlama" placeholder="Password Lama"></ion-input>
+      <ion-input type="password" name="passwordbaru" placeholder="Password Baru"></ion-input>
+      <ion-input type="password" name="confirmpass" placeholder="Konfirmasi Password"></ion-input>
+      <ion-button class="btn-ubh-pswd" expand="block" (click)="registerAction()">Ubah Password</ion-button>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,232 @@
+ion-icon {
+    color: black;
+}
+  
+.header-section {
+    padding-bottom: 2%;
+    z-index: 1;
+}
+
+ion-content {
+    z-index: 10;
+    position:absolute ;
+    --background: rgba(1,1,1,0);
+}
+
+.content-section {
+    margin-top:  17%;
+    background-color: white;
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+  
+.navigation {
+    --color: black;
+    text-transform: capitalize;
+}
+
+.profil-card {
+    width: 92%;
+    margin-top: 2%;
+    padding-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+ion-row {
+    margin-top: 3px;
+    margin-left: auto;
+}
+  
+.bank-user {
+    max-width: 50%;
+    overflow-x: hidden;
+}
+  
+.image {
+    max-width: 55%;
+    margin-left: 37px;
+    padding-top: 12%;
+    padding-left:15%;
+}
+  
+.bank-anda {
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 2px;
+    text-transform: capitalize;
+}
+  
+.bank-name {
+    font-size: 23px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    color: black;
+}
+  
+.rekening-bank {
+    font-size: 12px;
+}
+  
+.name-user {
+    font-size: 12px;
+}
+
+img {
+    width: 350px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+  
+ion-anchor {
+    transition: all 500ms ease-in-out;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(117, 117, 117);
+}
+  
+ion-anchor:hover {
+    border: 2px;
+    border-color: #F00;
+    color: #fff679;
+}
+  
+ion-input[type=number] {
+    margin-top: 25px;
+}
+  
+ion-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: rgba(231, 231, 231, 0.5);
+    text-indent: 20px;
+    transition: all 400ms ease-out;
+}
+  
+ion-select {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: rgba(231, 231, 231, 0.5);
+    text-indent: 20px;
+    transition: all 400ms ease-out;
+}
+
+.informasi-data-border {
+    margin-top: 2px;
+    margin-left: 2%;
+    background-image: linear-gradient(#3DBDCF, #55BF30);
+    height: 3px;
+    width: 14%;
+}
+  
+.informasi-data-title {
+    margin-left: 2%;
+    font-size: 15px;
+    font-weight: 700;
+}
+  
+.Ganti-Password-border {
+    margin-top: 2px;
+    margin-left: 2%;
+    background-image: linear-gradient(#3DBDCF, #55BF30);
+    height: 3px;
+    width: 14%;
+}
+  
+.Ganti-Password-title {
+    margin-left: 2%;
+    font-size: 15px;
+    font-weight: 700;
+}
+  
+.btn-ubh-pswd {
+    --background: linear-gradient(to bottom left, #3DBDCF, #55BF30);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 93%;
+    margin-left: 3%;
+    --border-radius: 45px 45px 45px 45px;
+}
+  
+.btn-ubh-profil {
+    --background: linear-gradient(to bottom left, #3DBDCF, #55BF30);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 93%;
+    margin-left: 3%;
+    --border-radius: 45px 45px 45px 45px;
+}
+
+ion-select:hover {
+    box-shadow: 0px 0px 4px #3DBDCF, 0px 0px 4px #55BF30;
+}
+  
+ion-input[type=number] {
+    margin-top: 35px;
+}
+  
+ion-input {
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: rgba(231, 231, 231, 0.5);
+    text-indent: 20px;
+    transition: all 400ms ease-out;
+}
+  
+ion-input:hover {
+    box-shadow: 0px 0px 4px #3DBDCF, 0px 0px 4px #55BF30;
+}
+  
+ion-anchor:hover {
+    border: 2px;
+    border-color: #F00;
+    color: #fff679;
+}
+  
+ion-anchor {
+    transition: all 500ms ease-in-out;
+    display: block;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(117, 117, 117);
+}
+
+h4 {
+    font-weight: bold;
+}
+
+.nama_bank {
+    margin-left: 10%;
+}
+  
+.jenis_bank {
+    margin-left: 10%;
+}
+  
+.no_rekening {
+    margin-left: 10%;
+}
+  
+.nama_pemilik {
+    margin-left: 10%;
+}
+  
+.n_bank {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: rgba(231, 231, 231, 0.5);
+    text-indent: 20px;
+    transition: all 400ms ease-out;
+}  

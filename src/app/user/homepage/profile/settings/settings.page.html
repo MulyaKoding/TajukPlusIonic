@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button class="navigation" routerLink="/">Pengaturan</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+  
+<ion-content fullscreen>
+  <ion-list>
+    <br>
+    <ion-label class="notifikasi-terbaru-title">Notifikasi</ion-label>
+    <div class="notifikasi-border"></div>
+    <ion-item>
+      <ion-label class="notifikasi-title">Notifikasi Berita Terbaru</ion-label>
+      <ion-toggle class="tag.btn" slot="end" name="Btu" color="white" checked></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Notifikasi Lamaran</ion-label>
+      <ion-toggle slot="end" name="apple" color="white" checked></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Notifikasi Informasi</ion-label>
+      <ion-toggle slot="end" name="grape" color="white"  checked></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Notifikasi Semua Chat</ion-label>
+      <ion-toggle slot="end" name="kiwi" color="white" checked></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <br><br>
+    <ion-label class="umum-title">Umum</ion-label>
+    <div class="umum-border"></div>
+    <ion-item>
+      <ion-label>Bahasa</ion-label>
+      <ion-select  [(ngModel)]="language" [value]="language" (ionChange)="changeLanguage()"  placeholder="indonesia">
+        <ion-select-option value="in">Indonesia</ion-select-option>
+        <ion-select-option value="en">English</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>  
