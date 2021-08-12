@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Toast } from '@capacitor/toast';
 import { NavparamService } from 'src/app/services/navparam/navparam.service';
-
-import { HTTP } from '@ionic-native/http/ngx';
+import { Http, HttpResponse } from '@capacitor-community/http';
 
 @Component({
   selector: 'app-complete-data',
@@ -18,8 +17,7 @@ export class CompleteDataPage implements OnInit {
 
   constructor(
     private navParamService: NavparamService,
-    private formBuilder: FormBuilder,
-    private http: HTTP
+    private formBuilder: FormBuilder
   ) { }
 
   ngOnInit() {
@@ -39,28 +37,47 @@ export class CompleteDataPage implements OnInit {
       confirmpass: ['', [Validators.required]],
       checktc: ['', [Validators.required]]
     });
-
-    this.http.get('http://17.0.0.1:8000/api/provinces', {}, {})
-      .then(data => {
-        console.log(data.status);
-        console.log(data.data);
-        console.log(data.headers);
-      }).catch(error => {
-        console.log(error.status);
-        console.log(error.error);
-        console.log(error.headers);
-      });
   }
 
   submitForm() {
     this.isSubmitted = true;
     if(!this.submitUser.valid) {
       Toast.show({
-        text: 'Isi kode OTP anda dengan lengkap!'
+        text: 'Isi form anda dengan lengkap!'
       });
       return false;
     } else {
-      console.log(this.submitUser.value);
+      var intcheckbox: number;
+      if(this.submitUser.get('checktc').value == true) {
+        intcheckbox = 1;
+      } else {
+        intcheckbox = 0;
+      }
+      const doPost = async () => {
+        const options = {
+          url: 'https://127.0.0.1:8000/api/register',
+          data: {
+            'fullname': this.submitUser.get('nama').value,
+            'username': this.submitUser.get('username').value,
+            'email': this.submitUser.get('email').value,
+            'phone': this.submitUser.get('phone').value,
+            'ktp': this.submitUser.get('noktp').value,
+            'province': this.submitUser.get('provinsi').value,
+            'city': this.submitUser.get('kota').value,
+            'district': this.submitUser.get('kecamatan').value,
+            'address': this.submitUser.get('alamat').value,
+            'password': this.submitUser.get('password').value,
+            'confirmpass': this.submitUser.get('confirmpass').value,
+            'term_cond': intcheckbox,
+            'user_type': '3'
+          }
+        };
+        const response: HttpResponse = await Http.post(options);
+        return console.log(response);
+      };
+
+
+      // console.log(intcheckbox);
     }
   }
 

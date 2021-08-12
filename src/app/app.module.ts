@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavparamService } from './services/navparam/navparam.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HTTP } from '@ionic-native/http/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +16,6 @@ import { HTTP } from '@ionic-native/http/ngx';
   providers: [
     ReactiveFormsModule,
     NavparamService,
-    HTTP,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent],
