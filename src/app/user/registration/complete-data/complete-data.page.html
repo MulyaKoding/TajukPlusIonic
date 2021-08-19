@@ -30,14 +30,14 @@
         Informasi Alamat
         <div class="label-borderline"></div>
       </ion-label>
-      <ion-select placeholder="Provinsi" formControlName="provinsi">
-        <ion-select-option value="11">DKI Jakarta</ion-select-option>
+      <ion-select placeholder="Provinsi" formControlName="provinsi" (click)="loadProvinces()">
+        <ion-select-option *ngFor="let province of provinces" value="{{province.id}}">{{province.name}}</ion-select-option>
       </ion-select>
-      <ion-select placeholder="Kota" formControlName="kota">
-        <ion-select-option value="154">Jakarta Timur</ion-select-option>
+      <ion-select placeholder="Kota" formControlName="kota" (click)="loadCities()">
+        <ion-select-option *ngFor="let city of cities" value="{{city.id}}">{{city.name}}</ion-select-option>
       </ion-select>
-      <ion-select placeholder="Kecamatan" formControlName="kecamatan">
-        <ion-select-option value="1901">Cipayung</ion-select-option>
+      <ion-select placeholder="Kecamatan" formControlName="kecamatan" (click)="loadDistricts()">
+        <ion-select-option *ngFor="let district of districts" value="{{district.id}}">{{district.name}}</ion-select-option>
       </ion-select>
       <ion-input type="text" formControlName="alamat" placeholder="Alamat Lengkap"></ion-input>
       

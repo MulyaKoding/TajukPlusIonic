@@ -10,12 +10,13 @@ import { NavparamService } from '../services/navparam/navparam.service';
 })
 export class OtpPage implements OnInit {
   navData: any;
-  postData = {
+  postData: any = {
     v1: '',
     v2: '',
     v3: '',
     v4: ''
   };
+  otpRes: number;
 
   constructor(
     private router: Router,
@@ -25,6 +26,8 @@ export class OtpPage implements OnInit {
   }
 
   ngOnInit() {
+    this.otpRes = Math.floor(Math.random() * 7999) + 2000;
+    console.log('Kode OTP anda: ' + this.otpRes);
   }
 
   keytab(event, next, prev) {
@@ -47,14 +50,17 @@ export class OtpPage implements OnInit {
     if(this.postData.v1 == '' || this.postData.v2 == '' || this.postData.v3 == '' || this.postData.v4 == '') {
       console.log('Kode OTP yang diinput : ' + confirmOtp);
       Toast.show({
-        text: 'Isi kode OTP anda dengan lengkap!'
+        text: 'Kode OTP nya belum lengkap tuh kak..'
       });
     } else {
-      console.log('Kode OTP yang diinput : ' + confirmOtp);
-      Toast.show({
-        text: 'Memverifikasi kode OTP...'
-      });
-      this.router.navigateByUrl('/complete-data');
+      if(confirmOtp == this.otpRes) {
+        console.log('Kode OTP yang diinput : ' + confirmOtp);
+        this.router.navigateByUrl('/complete-data');
+      } else {
+        Toast.show({
+          text: 'Yah, kode OTP nya kok berbeda?'
+        });
+      }
     }
   }
 
