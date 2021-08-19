@@ -13,12 +13,12 @@
   <div class="content-section">
     <img src="assets/logo/logo.png"/>
 
-    <form>
-      <ion-input type="tel" name="phone" [(ngModel)]="postData.phone" placeholder="No Handphone"></ion-input>
-      <ion-input type="password" name="password" [(ngModel)]="postData.password" placeholder="Password"></ion-input>
+    <form [formGroup]="loginData" (ngSubmit)="submitForm()" novalidate>
+      <ion-input type="tel" formControlName="phone" placeholder="No Handphone"></ion-input>
+      <ion-input type="password" formControlName="password" placeholder="Password"></ion-input>
       <ion-anchor routerLink='/lupa-password'>Lupa Password ?</ion-anchor>
       <ion-button class="btn-signup" href="/register">Daftar</ion-button>
-      <ion-button class="btn-login" (click)="loginAction()">Masuk</ion-button>
+      <ion-button class="btn-login">Masuk</ion-button>
     </form>
   </div>
 </ion-content>
