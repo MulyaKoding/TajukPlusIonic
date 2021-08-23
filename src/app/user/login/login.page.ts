@@ -33,7 +33,7 @@ export class LoginPage implements OnInit {
   submitForm() {
     if(!this.loginData.valid) {
       Toast.show({
-        text: 'Formnya dilengkapi dulu yah kak.'
+        text: 'Loginnya dilengkapi dulu yah kak.'
       })
       return false
     } else {
@@ -46,11 +46,12 @@ export class LoginPage implements OnInit {
         dataBody).subscribe(data => {
           if(data['success'] == true) {
             Toast.show({
-              text: 'Login berhasil'
+              text: 'Yay! Login berhasil.'
             })
 
             var userData = {
               token: data['data']['token'],
+              id: data['data']['userid'],
               fullname: data['data']['fullname'],
               username: data['data']['username'],
               email: data['data']['email'],
@@ -58,7 +59,16 @@ export class LoginPage implements OnInit {
               type: data['data']['user_type']
             };
             this.authService.login(userData)
+          } else {
+            Toast.show({
+              text: 'Login gagal, cek koneksi lalu coba lagi kak.'
+            })
           }
+        }, error => {
+          console.log(error);
+          Toast.show({
+            text: 'Login gagal, akunnya belum terdaftar kak.'
+          })
         }
       )
     }
