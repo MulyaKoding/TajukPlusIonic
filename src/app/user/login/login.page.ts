@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Toast } from '@capacitor/toast';
-import { Storage } from '@ionic/storage-angular';
+import { AuthenticationService } from 'src/app/services/authentication/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -17,19 +17,17 @@ export class LoginPage implements OnInit {
   loginData: FormGroup;
 
   constructor(
+    private router: Router,
     private formBuilder: FormBuilder,
     private http: HttpClient,
-    private storage: Storage,
-    private router: Router
+    private authService: AuthenticationService
   ) {}
 
-  async ngOnInit() {
+  ngOnInit() {
     this.loginData = this.formBuilder.group({
       phone: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       password: ['', [Validators.required]]
     })
-
-    await this.storage.create();
   }
 
   submitForm() {
@@ -50,17 +48,24 @@ export class LoginPage implements OnInit {
             Toast.show({
               text: 'Login berhasil'
             })
-            this.storage.set('user_key', data['data']['token'])
-            this.storage.set('user_fullname', data['data']['fullname'])
-            this.storage.set('user_username', data['data']['username'])
-            this.storage.set('user_email', data['data']['email'])
-            this.storage.set('user_phone', data['data']['phone'])
-            this.storage.set('user_type', data['data']['user_type'])
-            this.router.navigateByUrl('/homepage')
+
+            var userData = {
+              token: data['data']['token'],
+              fullname: data['data']['fullname'],
+              username: data['data']['username'],
+              email: data['data']['email'],
+              phone: data['data']['phone'],
+              type: data['data']['user_type']
+            };
+            this.authService.login(userData)
           }
         }
       )
     }
+  }
+
+  btnRegister() {
+    this.router.navigate(['register'])
   }
 
 }

@@ -1,104 +1,133 @@
 <ion-content>
-  <div class="header-section">
-    <ion-img src="assets/logo/logo-white.png"></ion-img>
-  </div>
+    <div class="header-section">
+      <ion-img src="assets/logo/logo-white.png"></ion-img>
+    </div>
 
-  <ion-card class="profile-card">
-    <ion-grid>
+    <ion-card class="profile-card">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="col-left">
+            <img src="assets/images/profile/empty.png"/>
+          </ion-col>
+          <ion-col class="col-mid">
+            <ion-row>
+              <ion-label class="cardpro-name">Ade Meridien Jaya</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label class="cardpro-email">ademeridien12@gmail.com</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-label class="cardpro-phone">+62 813-1836-3623</ion-label>
+            </ion-row>
+          </ion-col>
+          <ion-col class="col-right">
+            <ion-label class="cardpro-job">Guest</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
+    <ion-card class="info-card">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-icon name="close" class="cardinfo-close"></ion-icon>
+            <ion-label class="cardinfo-title">Informasi</ion-label>
+            <ion-label class="cardinfo-desc">Pemerintah mulai melonggarkan PPKM secara bertahap hingga 26 Juli 2021.</ion-label>
+            <ion-icon name="information-outline" class="bg-cardinfo"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
+    <ion-grid class="segment-wrapper">
       <ion-row>
         <ion-col>
-          <ion-img class="profile-img" src="assets/images/profile/empty.png"></ion-img>
+          <ion-button fill="clear" class="btn-segment">
+            <ion-icon name="video" class="segment-icon1"></ion-icon>
+            <ion-label class="segment-label">video</ion-label>
+          </ion-button>
         </ion-col>
         <ion-col>
-          <ion-list class="profile-data">
-            <p class="profile-data-name">Ade Meridien</p>
-            <p class="profile-data-email">ademeridien12@gmail.com</p>
-            <p class="profile-data-phone">+62 81318363623</p>
-          </ion-list>
+          <ion-button fill="clear" class="btn-segment">
+            <ion-icon name="news" class="segment-icon2"></ion-icon>
+            <ion-label class="segment-label">news</ion-label>
+          </ion-button>
         </ion-col>
         <ion-col>
-          <ion-label>staff</ion-label>
+          <ion-button fill="clear" class="btn-segment">
+            <ion-icon name="chat" class="segment-icon3"></ion-icon>
+            <ion-label class="segment-label">chat</ion-label>
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button fill="clear" class="btn-segment">
+            <ion-icon name="recruitment" class="segment-icon3"></ion-icon>
+            <ion-label class="segment-label">recruitment</ion-label>
+          </ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
-  </ion-card>
 
-  <ion-grid class="segment-wrapper">
-    <ion-row>
-      <ion-col>
-        <ion-button fill="clear" class="btn-segment">
-          <ion-icon name="video" class="segment-icon1"></ion-icon>
-          <ion-label class="segment-label">video</ion-label>
-        </ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button fill="clear" class="btn-segment">
-          <ion-icon name="news" class="segment-icon2"></ion-icon>
-          <ion-label class="segment-label">news</ion-label>
-        </ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button fill="clear" class="btn-segment" href="/login">
-          <ion-icon name="chat" class="segment-icon3"></ion-icon>
-          <ion-label class="segment-label">chat</ion-label>
-        </ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button fill="clear" class="btn-segment" href="/login">
-          <ion-icon name="transfer" class="segment-icon3"></ion-icon>
-          <ion-label class="segment-label">transfer</ion-label>
-        </ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+    <ion-label class="newspaper-title">
+      Berita Terbaru
+      <div class="newspaper-borderline"></div>
+    </ion-label>
 
-  <ion-label class="newspaper-title">
-    Berita Terbaru
-    <div class="newspaper-borderline"></div>
-  </ion-label>
-
-  <div class="tag-wrapper">
-    <ion-button class="tag-btn">terbaru</ion-button>
-    <ion-button class="tag-btn">rekomendasi</ion-button>
-  </div>
-
-  <ion-card class="art-card">
-    <div class="art-img-wrapper">
-      <img src="assets/images/article/art2.jpeg" class="art-img">
+    <div class="tag-wrapper">
+      <ion-button class="tag-btn">Terpopuler</ion-button>
+      <ion-button class="tag-btn">Presiden</ion-button>
+      <ion-button class="tag-btn">Covid-19</ion-button>
+      <ion-button class="tag-btn">Wisata</ion-button>
+      <ion-button class="tag-btn">ipsum</ion-button>
+      <ion-button class="tag-btn">#simply</ion-button>
+      <ion-button class="tag-btn">lorem</ion-button>
+      <ion-button class="tag-btn">ipsum</ion-button>
+      <ion-button class="tag-btn">#simply</ion-button>
     </div>
-    <ion-card-content>
-      <p class="art-text-title">Sandiaga Dukung PPKM Darurat, Destinasi Wisata Tutup Sementara</p>
-      <p class="art-text-content">Kebijakan Pemberlakuan Pembatasan Kegiatan Masyarakat (PPKM) Darurat yang ditetapkan sejak 3-20 Juli 2021...</p>
-    </ion-card-content>
-  </ion-card>
 
-  <ion-card class="art-card">
-    <div class="art-img-wrapper">
-      <img src="assets/images/article/art1.jpeg" class="art-img">
-    </div>
-    <ion-card-content>
-      <p class="art-text-title">Pandemi Covid-19, Program Sejuta Rumah Tetap Berjalan Tembus 312.290 Unit</p>
-      <p class="art-text-content">Pandemi Covid-19 di Indonesia tidak menyurutkan semangat Kementerian PUPR bersama pemangku...</p>
-    </ion-card-content>
-  </ion-card>
+    <ion-card class="art-card">
+      <div class="art-img-wrapper">
+        <img src="assets/images/article/art1.jpeg" class="art-img">
+      </div>
+      <ion-card-content>
+        <p class="art-text-title">Pandemi Covid-19, Program Sejuta Rumah Tetap Berjalan Tembus 312.290 Unit</p>
+        <p class="art-text-content">Pandemi Covid-19 di Indonesia tidak menyurutkan semangat Kementerian PUPR bersama pemangku...</p>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-card class="art-card">
+      <div class="art-img-wrapper">
+        <img src="assets/images/article/art2.jpeg" class="art-img">
+      </div>
+      <ion-card-content>
+        <p class="art-text-title">Sandiaga Dukung PPKM Darurat, Destinasi Wisata Tutup Sementara</p>
+        <p class="art-text-content">Kebijakan Pemberlakuan Pembatasan Kegiatan Masyarakat (PPKM) Darurat yang ditetapkan sejak 3-20 Juli 2021...</p>
+      </ion-card-content>
+    </ion-card>
 
-  <ion-card class="art-card">
-    <div class="art-img-wrapper">
-      <img src="assets/images/article/art3.png" class="art-img">
-    </div>
-    <ion-card-content>
-      <p class="art-text-title">Kelompok ini Meminjamkan Tabung Oksigen Gratis untuk yang Isoman</p>
-      <p class="art-text-content">Peningkatan jumlah pasien COVID-19 berbanding lurus dengan meningkatnya kebutuhan tabung oksigen, terutama...</p>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card class="art-card">
-    <div class="art-img-wrapper">
-      <img src="assets/images/article/sample-img.png" class="art-img">
-    </div>
-    <ion-card-content>
-      <p class="art-text-title">Lorem Ipsum is simply</p>
-      <p class="art-text-content">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
-    </ion-card-content>
-  </ion-card>
+    <ion-tabs>
+      <ion-tab-bar>
+        <ion-tab-button tab="beranda">
+          <ion-icon name="tab-beranda-active"></ion-icon>
+          <ion-label class="label-tab-bar">Beranda</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="video">
+          <ion-icon name="tab-video-inactive"></ion-icon>
+          <ion-label class="label-tab-bar">Video</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="recruitment">
+          <ion-icon name="tab-recruitment-inactive"></ion-icon>
+          <ion-label class="label-tab-bar">Recruitment</ion-label>
+        </ion-tab-button> 
+        <ion-tab-button tab="chat">
+          <ion-icon name="tab-chat-inactive"></ion-icon>
+          <ion-label class="label-tab-bar">Chat</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="profil">
+          <ion-icon name="tab-profil-active"></ion-icon>
+          <ion-label class="label-tab-bar">Profil</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
 </ion-content>
