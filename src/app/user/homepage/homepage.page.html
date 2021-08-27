@@ -20,9 +20,9 @@
             <ion-label class="cardpro-phone">{{ userData.phone }}</ion-label>
           </ion-row>
         </ion-col>
-        <ion-col class="col-right" *ngif="userData.type === 3; then stateGuest else stateStaff">
-          <ion-label class="cardpro-job" #stateGuest>Guest</ion-label>
-          <ion-label class="cardpro-job" #stateStaff>Staff</ion-label>
+        <ion-col class="col-right">
+          <ion-label class="cardpro-job-guest" *ngIf="userData.type === 3">Guest</ion-label>
+          <ion-label class="cardpro-job-staff" *ngIf="userData.type === 1">Staff</ion-label>
         </ion-col>
       </ion-row>
     </ion-grid>

@@ -1,0 +1,471 @@
+ion-icon{
+    width: 100%;
+    color: white;
+}
+
+ion-content{
+    z-index: 10;
+    position: absolute;
+    --background: rgba(1,1,1,0);
+}
+
+.navigation{
+   --color: white;
+   text-transform: capitalize;
+   margin-left: 0%;
+   margin-left: 0%; 
+   font-size: 20px;
+}
+
+.header-section{
+    --background: linear-gradient(to bottom left, #3DBDCF, #55BF30);
+    padding-bottom: 40%;
+    padding-top: 0%;
+    z-index: 1;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.content-section-toolbar{
+    margin-top: 35%;
+    background-color: white;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.img-logo{
+    padding-top: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.card-title{
+    font-size: 16px;
+    margin-left: 0%;
+    margin-right: 0%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.card-subtitle{
+    font-size: 14px;
+    margin-left: 0%;
+    margin-right: 0%;
+    text-align: left;
+}
+
+.btn-akun{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.btn-keamanan{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 2%;
+}
+
+.btn-pembayaran{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 2%;
+}
+
+.icon-akun{
+    color: lightslategrey;
+    padding-left: auto;
+    padding-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+.icon-keamanan{
+    color: lightslategrey;
+    padding-left: auto;
+    padding-right: auto;
+    margin-right: auto;
+    margin-left: auto;
+    float: left;
+}
+.icon-pembayaran{
+    color: lightslategrey;
+    padding-left: auto;
+    padding-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+.text-akun{
+margin-left: 0%;
+margin-right: 0%;
+padding-right: 43%;
+padding-left: 0%;
+color: black;
+float: right;
+text-transform: capitalize;
+font-size: 12px;
+}
+
+.text-keamanan{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 45%;
+    padding-left: 0%;
+    color: black;
+    float: right;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.text-pembayaran{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 70%;
+    padding-left: 0%;
+    color: black;
+    float: right;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.btn-beranda{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.btn-media{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 2%;
+}
+
+.btn-user-time{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 2%;
+}
+
+.btn-mode{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 2%;
+}
+
+.icon-beranda{
+    color: lightslategrey;
+    padding-left: auto;
+    padding-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+.icon-media{
+    color: lightslategrey;
+    padding-left: auto;
+    padding-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+.icon-user-time{
+    color: lightslategrey;
+    padding-left: auto;
+    padding-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+.icon-mode{
+    color: lightslategrey;
+    padding-left: auto;
+    padding-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+
+.text-beranda{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 65%;
+    padding-left: 0%;
+    color: black;
+    float: right;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.text-media{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 80%;
+    padding-left: 0%;
+    color: black;
+    float: right;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.text-user-time{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 45%;
+    padding-left: 0%;
+    color: black;
+    float: right;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.text-mode{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 70%;
+    padding-left: 0%;
+    color: black;
+    float: right;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.btn-preferensi{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.btn-lokasi{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.btn-work{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.icon-preferensi{
+    color: lightslategrey;
+    padding-left: auto;
+    padding-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+.icon-lokasi{
+    color: lightslategrey;
+    padding-left: auto;
+    padding-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+.icon-work{
+    color: lightslategrey;
+    padding-left: auto;
+    padding-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+.text-preferensi{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 65%;
+    padding-left: 0%;
+    color: black;
+    float: right;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.text-lokasi{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 80%;
+    padding-left: 0%;
+    color: black;
+    float: right;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.text-work{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 37%;
+    padding-left: 0%;
+    color: black;
+    float: right;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.btn-ketentuan{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.btn-kebijakan-data{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 2%;
+}
+
+.btn-kebijakan-cookie{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 2%;
+}
+
+.btn-standar-komunitas{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 2%;
+}
+
+.btn-tentang{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 2%;
+}
+
+.icon-ketentuan{
+    color: lightslategrey;
+    padding-left: auto;
+    padding-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+.icon-kebijakan-data{
+    color: lightslategrey;
+    padding-left: auto;
+    padding-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+.icon-kebijakan-cookie{
+    color: lightslategrey;
+    padding-left: auto;
+    padding-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+.icon-standar-komunitas{
+    color: lightslategrey;
+    padding-left: auto;
+    padding-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+.icon-tentang{
+    color: lightslategrey;
+    padding-left: auto;
+    padding-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+.text-ketentuan{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 55%;
+    padding-left: 0%;
+    color: black;
+    float: right;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.text-kebijakan-data{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 63%;
+    padding-left: 0%;
+    color: black;
+    float: right;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.text-kebijakan-cookie{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 59%;
+    padding-left: 0%;
+    color: black;
+    float: right;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.text-standar-komunitas{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 56%;
+    padding-left: 0%;
+    color: black;
+    float: right;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.text-tentang{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 76%;
+    padding-left: 0%;
+    color: black;
+    float: right;
+    text-transform: capitalize;
+    font-size: 12px;
+}

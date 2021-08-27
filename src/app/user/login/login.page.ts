@@ -11,8 +11,8 @@ import { AuthenticationService } from 'src/app/services/authentication/authentic
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  endPoint = 'http://10.0.2.2:8000/api/'; // <=== Testing APPS
-  // endPoint = 'http://127.0.0.1:8000/api/'; // <=== Testing WebView
+  // endPoint = 'http://10.0.2.2:8000/api/'; // <=== Testing APPS
+  endPoint = 'http://127.0.0.1:8000/api/'; // <=== Testing WebView
 
   loginData: FormGroup;
 

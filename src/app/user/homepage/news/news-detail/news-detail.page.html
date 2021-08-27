@@ -1,22 +1,21 @@
-<ion-header>
-  <ion-toolbar class="header-section">
-    <ion-buttons slot="start">
-      <ion-button color="primary">
-        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-buttons slot="start">
-      <ion-button class="navigation" href="/">Detail News</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-header>
+    <ion-toolbar class="header-section">
+      <ion-buttons slot="start">
+        <ion-button color="primary">
+          <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button class="navigation" href="/">Detail News</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
   <div class="content-section">
     <center>
-      <img src="assets/icon/news/news7.jpeg" class="data-img-bckgrnd">
+      <img src="assets/images/news/news15.jpeg" class="data-img-bckgrnd">
     </center>
-  </div>
+ 
 
   <ion-chip class="topic">
     <ion-label>Covid 19</ion-label>
@@ -25,13 +24,183 @@
   <p class="title-news">Menanti Nasib PPKM Level 4 Usai Evaluasi Hati-Hati</p>
 
   <div class="section-profil-img">
-    <img src="assets/icon/news/profil.jpg " class="img-profil">
-    <p class="profil-image">Vidya Nathania</p>
+    <img src="assets/images/news/profil.jpg " class="img-profil">
+    <p class="profil-image">Agnes Mo</p>
     <h1 class="content-time">10 Menit yang Lalu
       <ion-icon class="icon-share" name="share" isActive="false"></ion-icon> 
+      <h7>50</h7>
       <ion-icon class="icon-eye" name="eye" isActive="false"></ion-icon> 
+      <h7>50</h7>
       <ion-icon class="icon-heart" name="heart" isActive="false"></ion-icon>
+      <h7>50</h7>
       <ion-icon class="icon-chat" name="chatbubbles" isActive="false"></ion-icon>
+      <h7>50</h7>
     </h1>
+    <div class="border"></div>
+
+    <h2 class="news-information-main">Jakarta - Masa perpanjangan PPKM level 4 berakhir hari ini. Keputusan resmi mengenai lanjut atau tidaknya PPKM level 4 bakal diumumkan pemerintah setelah melakukan evaluasi secara hati-hati.</h2>
+    <h3 class="news-information-topic">Dalam rapat terbatas bersama para gubernur, Presiden Joko Widodo (Jokowi) sudah mewanti-wanti soal lonjakan kasus COVID-19 yang mulai bergeser ke luar Jawa dan Bali. 
+      Jokowi meminta penanganan dilakukan secara cepat."Respons cepat, karena kelihatannya ini terjadi pergeseran lonjakan dari Jawa Bali menuju ke luar Jawa-Bali,
+      " kata Jokowi dalam rapat yang disiarkan dalam YouTube Sekretariat Presiden, Sabtu (7/8).</h3>
+    </div>
+    
+  <ion-chip class="status-inside">
+    <div class="container-ls">
+      <ion-icon  size="large" class="icon-heart-status" name="heart" isActive="false"></ion-icon>
+      <p class="text-like">Suka</p>
+    </div>
+    <div class="container-cs">
+      <ion-icon size="large" class="icon-heart-chatbubbles" name="chatbubbles" isActive="false"></ion-icon>
+      <p class="text-komentar">Komentar</p>
+    </div>
+    <div class="container-rs">
+      <ion-icon size="large" class="icon-heart-share" name="share" isActive="false"></ion-icon>
+      <p class="text-bagikan">Bagikan</p>
+    </div>
+  </ion-chip>
+  
+  <div class="section-tags-news">
+    <ion-label class="section-tags">
+        Tags
+    </ion-label>
   </div>
+
+  <ion-segment scrollable class="tag-news">
+    <ion-button tab="1" class="tag-btn-news">Tag 1</ion-button>
+    <ion-button tab="2" class="tag-btn-news">Tag 2</ion-button>
+    <ion-button tab="3" class="tag-btn-news">Tag 3</ion-button>
+    <ion-button tab="4" class="tag-btn-news">Tag 4</ion-button>
+    <ion-button tab="5" class="tag-btn-news">Tag 5</ion-button>
+    <ion-button tab="6" class="tag-btn-news">Tag 6</ion-button>
+    <ion-button tab="7" class="tag-btn-news">Tag 7</ion-button>
+  </ion-segment>
+
+  <div class="section-information-news">
+    <ion-label class="section-informations">
+      Informasi Terkait
+      <div class="section-informations-border"></div>
+    </ion-label>
+
+    <ion-segment scrollable class="tag-information-news">
+
+      <ion-card class="new-card">
+        <div class="news-infromation-img">
+          <img src="assets/images/news/news10.jpeg" class="img-news">
+        </div>
+        <ion-card-content>
+          <p class="title-news-informations">Benarkah Efek Samping Vaksin Modern Lebih Nampol?</p>
+        </ion-card-content>
+          <img src="assets/images/news/profil1.jpg " class="img-profil">
+          <p class="news-profil-image">Raisa P.S</p>
+          <h1 class="news-content-time">5 Menit yang Lalu </h1>
+        
+      </ion-card>
+
+      <ion-card class="new-card">
+        <div class="news-infromation-img">
+          <img src="assets/images/news/news11.jpeg" class="img-news">
+        </div>
+        <ion-card-content>
+          <p class="title-news-informations">Gaya Hidup Daring Jadi Sorotan Jokowi di Kala Pandemi</p>
+        </ion-card-content>
+      
+          <img src="assets/images/news/profil2.jpg " class="news-img-profil">
+          <p class="news-profil-image">Citra Kirana</p>
+          <h1 class="news-content-time">10 Menit yang Lalu </h1>
+       
+      </ion-card>
+
+      <ion-card class="new-card">
+        <div class="news-infromation-img">
+          <img src="assets/images/news/news12.jpeg" class="img-news">
+        </div>
+        <ion-card-content>
+          <p class="title-news-informations">Segera Daftar! 4 Lokasi Vaksin CT Corp Ini Pakai AstraZeneca</p>
+        </ion-card-content>
+       
+          <img src="assets/images/news/profil3.jpg " class="news-img-profil">
+          <p class="news-profil-image">Vidya Nathania</p>
+          <h1 class="news-content-time">30 Menit yang Lalu </h1>
+       
+      </ion-card>
+
+      <ion-card class="new-card">
+        <div class="news-infromation-img">
+          <img src="assets/images/news/news13.jpeg" class="img-news">
+        </div>
+        <ion-card-content>
+          <p class="title-news-informations">Ahli Virus Wuhan Ungkap Virus Corona Terus Bermutasi</p>
+        </ion-card-content>
+       
+          <img src="assets/images/news/profil4.jpg " class="news-img-profil">
+          <p class="news-profil-image">Cinta Laura </p>
+          <h1 class="news-content-time">40 Menit yang Lalu </h1>
+     
+
+      </ion-card>
+
+
+      <ion-card class="new-card">
+        <div class="news-infromation-img">
+          <img src="assets/images/news/news14.jpeg" class="img-news">
+        </div>
+        <ion-card-content>
+          <p class="title-news-informations">Corona Kembali Menggila di RS Mulai Kekurangan kamar ICU</p>
+        </ion-card-content>
+        
+          <img src="assets/images/news/profil5.jpg " class="news-img-profil">
+          <p class="news-profil-image">Ayu Ting-Ting</p>
+          <h1 class="news-content-time">10 Menit yang Lalu </h1>
+        
+      </ion-card>
+      
+
+    </ion-segment>
+    
+    <div class="content-information-news">
+
+      <ion-label class="content-informations">
+        Informasi Terbaru
+        <div class="content-informations-border"></div>
+      </ion-label>
+
+        <ion-card class="content-new-card">
+          <div class="content-news-infromation-img">
+            <img src="assets/images/news/news17.jpeg" class="content-img-news">
+          </div>
+          <ion-card-content>
+            <p class="content-title-news">Masih Banyak yang Kena COVID-19 Setelah Vaksinasi, Ini Penjelasan WHO</p>
+            <img src="assets/images/news/profil.jpg " class="content-news-img-profil">
+            <p class="content-news-profil-image">Vidya Nathania</p>
+            <h1 class="content-news-content-time">10 Menit yang Lalu </h1>
+          </ion-card-content>
+        </ion-card>  
+
+        <ion-card class="content-new-card">
+          <div class="content-news-infromation-img">
+            <img src="assets/images/news/news18.jpeg" class="content-img-news">
+          </div>
+          <ion-card-content>
+            <p class="content-title-news">Vaksin Moderna Mulai Diberikan ke Non-nakes, Ini Daftar Efek Sampingnya</p>
+            <img src="assets/images/news/profil4.jpg " class="content-news-img-profil">
+            <p class="content-news-profil-image">Freya Sakina</p>
+            <h1 class="content-news-content-time">10 Menit yang Lalu </h1>
+          </ion-card-content>
+        </ion-card>  
+
+        <ion-card class="content-new-card">
+          <div class="content-news-infromation-img">
+            <img src="assets/images/news/news19.jpeg" class="content-img-news">
+          </div>
+          <ion-card-content>
+            <p class="content-title-news">Didampingi Istri, Jerinx Disuntik Vaksin COVID-19 di tempat, Senin 16-08-2021</p>
+            <img src="assets/images/news/profil5.jpg " class="content-news-img-profil">
+            <p class="content-news-profil-image">Rintya Asri</p>
+            <h1 class="content-news-content-time">10 Menit yang Lalu </h1>
+          </ion-card-content>
+          
+        </ion-card>  
+    </div>
+  </div>
+</div>
 </ion-content>

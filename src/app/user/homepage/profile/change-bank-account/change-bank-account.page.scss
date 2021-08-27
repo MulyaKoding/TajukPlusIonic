@@ -1,227 +1,216 @@
-ion-icon {
+ion-icon{
     color: black;
-}
+    width: 100%;
+  }
   
-.header-section {
-    padding-bottom: 2%;
-    z-index: 1;
-}
-
-ion-content {
+  ion-content{
     z-index: 10;
     position:absolute ;
     --background: rgba(1,1,1,0);
-}
-
-.content-section {
-    margin-top:  17%;
+  }
+  
+  .content-section {
+    margin-top: 1%;
     background-color: white;
     width: 100%;
-    padding-top: 10px;
+    padding-top: 5%;
     padding-right: 15px;
     padding-left: 15px;
-}
   
-.navigation {
+  }
+  
+  .navigation {
     --color: black;
     text-transform: capitalize;
-}
-
-.profil-card {
-    width: 92%;
-    margin-top: 2%;
-    padding-top: 3%;
+    font-size: 20px;
+  }
+  
+  .profil-card{
+    width: 98%;
+    margin-top: 1%;
+    padding-top: 2%;
     margin-left: auto;
     margin-right: auto;
-}
+    border-radius: 15px;
+  }
   
-ion-row {
-    margin-top: 3px;
+  ion-row{
+    margin-top: 1px;
     margin-left: auto;
-}
+  }
   
-.bank-user {
+  .bank-user{
     max-width: 50%;
     overflow-x: hidden;
-}
+  }
   
-.image {
-    max-width: 55%;
-    margin-left: 37px;
-    padding-top: 12%;
-    padding-left:15%;
-}
   
-.bank-anda {
+  .image-money{
+    transform: rotate(340deg);
+    color: #3DBDCF;
+    opacity: 0.2;
+    right: 0;
+    bottom: 0;
+    margin-right: -67px;
+    margin-bottom: -6px;
+    margin-top: -10px;
+    width: 220px;
+    height: 100px;
+    position: absolute;
+  }
+  
+  
+  
+  .bank-anda{
     font-weight: 600;
     font-size: 13px;
     margin-bottom: 2px;
+    padding-right: 5%;
     text-transform: capitalize;
-}
+  }
   
-.bank-name {
+  .bank-name{
     font-size: 23px;
     margin-bottom: 2px;
     font-weight: bold;
     color: black;
-}
+  }
   
-.rekening-bank {
+  .rekening-bank{
     font-size: 12px;
-}
+  }
   
-.name-user {
+  .name-user{
     font-size: 12px;
-}
-
-img {
-    width: 350px;
+  }
+  
+  img {
+    height: 100px;
+    max-width: 200px;
+    margin-left: 0%;
+    margin-right: 0%;
     display: block;
-    margin-right: auto;
-    margin-left: auto;
-}
+  }
   
-ion-anchor {
+  ion-anchor {
     transition: all 500ms ease-in-out;
     display: block;
     text-align: center;
     font-weight: 500;
     color: rgb(117, 117, 117);
-}
+  }
   
-ion-anchor:hover {
-    border: 2px;
-    border-color: #F00;
-    color: #fff679;
-}
   
-ion-input[type=number] {
-    margin-top: 25px;
-}
-  
-ion-input {
+  ion-select {
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 5px;
+    padding: 15px;
     border-radius: 20px;
     background-color: rgba(231, 231, 231, 0.5);
     text-indent: 20px;
     transition: all 400ms ease-out;
-}
+  }
   
-ion-select {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 5px;
-    border-radius: 20px;
-    background-color: rgba(231, 231, 231, 0.5);
-    text-indent: 20px;
-    transition: all 400ms ease-out;
-}
-
-.informasi-data-border {
+  .informasi-data-border{
     margin-top: 2px;
     margin-left: 2%;
     background-image: linear-gradient(#3DBDCF, #55BF30);
     height: 3px;
     width: 14%;
-}
+  }
   
-.informasi-data-title {
+  .informasi-data-title {
     margin-left: 2%;
     font-size: 15px;
     font-weight: 700;
-}
+  }
   
-.Ganti-Password-border {
+  .Ganti-Password-border{
     margin-top: 2px;
     margin-left: 2%;
     background-image: linear-gradient(#3DBDCF, #55BF30);
     height: 3px;
     width: 14%;
-}
+  }
   
-.Ganti-Password-title {
+  .Ganti-Password-title{
     margin-left: 2%;
     font-size: 15px;
     font-weight: 700;
-}
+  }
   
-.btn-ubh-pswd {
+  .btn-ubh-profil{
     --background: linear-gradient(to bottom left, #3DBDCF, #55BF30);
-    margin-top: 20px;
-    margin-bottom: 30px;
-    width: 93%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    max-width: 90%;
+    height: 45px;
+    font-size: 16px;
     margin-left: 3%;
     --border-radius: 45px 45px 45px 45px;
-}
+    text-transform: capitalize;
+  }
   
-.btn-ubh-profil {
-    --background: linear-gradient(to bottom left, #3DBDCF, #55BF30);
-    margin-top: 20px;
-    margin-bottom: 30px;
-    width: 93%;
-    margin-left: 3%;
-    --border-radius: 45px 45px 45px 45px;
-}
-
-ion-select:hover {
+  .input-kota{
+    margin-top: 26%;
+  }
+  
+  ion-select:hover{
     box-shadow: 0px 0px 4px #3DBDCF, 0px 0px 4px #55BF30;
-}
+  }
   
-ion-input[type=number] {
+  ion-input[type=number] {
     margin-top: 35px;
-}
+  }
   
-ion-input {
+  ion-input {
+    width: 100%;
+    height: 50px;
+    padding: 20px;
     margin-bottom: 20px;
-    padding: 5px;
     border-radius: 20px;
     background-color: rgba(231, 231, 231, 0.5);
     text-indent: 20px;
     transition: all 400ms ease-out;
-}
+  }
   
-ion-input:hover {
-    box-shadow: 0px 0px 4px #3DBDCF, 0px 0px 4px #55BF30;
-}
-  
-ion-anchor:hover {
+  ion-anchor:hover {
     border: 2px;
     border-color: #F00;
     color: #fff679;
-}
+  }
   
-ion-anchor {
+  ion-anchor {
     transition: all 500ms ease-in-out;
     display: block;
     padding-top: 10px;
     text-align: center;
     font-weight: 500;
     color: rgb(117, 117, 117);
-}
-
-h4 {
+  }
+  
+  h4{
     font-weight: bold;
-}
-
-.nama_bank {
-    margin-left: 10%;
-}
+  }
   
-.jenis_bank {
-    margin-left: 10%;
-}
+  .nama_bank{
+      margin-left: 10%;
   
-.no_rekening {
-    margin-left: 10%;
-}
+  }
   
-.nama_pemilik {
-    margin-left: 10%;
-}
+  .jenis_bank{
+      margin-left: 10%;
+  }
   
-.n_bank {
+  .no_rekening{
+      margin-left: 10%;
+  }
+  
+  .nama_pemilik{
+      margin-left: 10%;
+  }
+  
+  .n_bank{
     margin-top: 10px;
     margin-bottom: 30px;
     padding: 5px;
@@ -229,4 +218,9 @@ h4 {
     background-color: rgba(231, 231, 231, 0.5);
     text-indent: 20px;
     transition: all 400ms ease-out;
-}  
+  }
+  
+  
+  
+  
+  

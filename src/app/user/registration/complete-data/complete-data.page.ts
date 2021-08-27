@@ -1,23 +1,23 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { Toast } from '@capacitor/toast';
-import { NavparamService } from 'src/app/services/navparam/navparam.service';
+import { HttpClient } from '@angular/common/http'
+import { Component, OnInit } from '@angular/core'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms'
+import { Router } from '@angular/router'
+import { Toast } from '@capacitor/toast'
+import { NavparamService } from 'src/app/services/navparam/navparam.service'
 
 interface Province {
-  id: number;
-  name: string;
+  id: number
+  name: string
 }
 
 interface City {
-  id: number;
-  name: string;
+  id: number
+  name: string
 }
 
 interface District {
-  id: number;
-  name: string;
+  id: number
+  name: string
 }
 
 @Component({
@@ -26,14 +26,14 @@ interface District {
   styleUrls: ['./complete-data.page.scss'],
 })
 export class CompleteDataPage implements OnInit {
-  submitUser: FormGroup;
-  navData: any;
-  endPoint = 'http://10.0.2.2:8000/api/'; // <=== Testing APPS
-  // endPoint = 'http://127.0.0.1:8000/api/'; // <=== Testing WebView
+  submitUser: FormGroup
+  navData: any
+  // endPoint = 'http://10.0.2.2:8000/api/' // <=== Testing APPS
+  endPoint = 'http://127.0.0.1:8000/api/' // <=== Testing WebView
 
-  provinces: Province[] = [];
-  cities: City[] = [];
-  districts: District[] = [];
+  provinces: Province[] = []
+  cities: City[] = []
+  districts: District[] = []
 
   constructor(
     private navParamService: NavparamService,
@@ -43,7 +43,7 @@ export class CompleteDataPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.navData = this.navParamService.getNavData();
+    this.navData = this.navParamService.getNavData()
 
     this.submitUser = this.formBuilder.group({
       nama: ['', [Validators.required, Validators.minLength(4)]],
@@ -58,7 +58,7 @@ export class CompleteDataPage implements OnInit {
       password: ['', [Validators.required]],
       confirmpass: ['', [Validators.required]],
       checktc: [false, [Validators.required]]
-    });
+    })
 
     this.http.get(this.endPoint + 'provinces')
     .subscribe(
@@ -66,26 +66,26 @@ export class CompleteDataPage implements OnInit {
         if(data['success'] == true) {
           this.provinces = data['data']
         } else {
-          this.provinces = null;
+          this.provinces = null
           Toast.show({
             text: 'Terjadi kesalahan. Ulangi lagi registrasinya kak'
-          });
-          this.router.navigateByUrl('/register');
+          })
+          this.router.navigateByUrl('/register')
         }
       }, error => {
-        console.log(error);
-        this.provinces = null;
+        console.log(error)
+        this.provinces = null
         Toast.show({
           text: 'Terjadi kesalahan. Ulangi lagi registrasinya kak'
-        });
-        this.router.navigateByUrl('/register');
+        })
+        this.router.navigateByUrl('/register')
       }
     );
   }
 
   loadProvinces() {
-    this.submitUser.get('kota').setValue(0);
-    this.submitUser.get('kecamatan').setValue(0);
+    this.submitUser.get('kota').setValue(0)
+    this.submitUser.get('kecamatan').setValue(0)
   }
 
   loadCities() {
@@ -95,14 +95,14 @@ export class CompleteDataPage implements OnInit {
         if(data['success'] == true) {
           this.cities = data['data']
         } else {
-          this.cities = null;
+          this.cities = null
         }
       }, error => {
-        console.log(error);
-        this.cities = null;
+        console.log(error)
+        this.cities = null
       }
     );
-    this.submitUser.get('kecamatan').setValue(0);
+    this.submitUser.get('kecamatan').setValue(0)
   }
 
   loadDistricts() {
@@ -112,11 +112,11 @@ export class CompleteDataPage implements OnInit {
         if(data['success'] == true) {
           this.districts = data['data']
         } else {
-          this.districts = null;
+          this.districts = null
         }
       }, error => {
         console.log(error);
-        this.districts = null;
+        this.districts = null
       }
     )
   }
@@ -128,11 +128,11 @@ export class CompleteDataPage implements OnInit {
       })
       return false
     } else {
-      let intcheckbox: number = 0;
+      let intcheckbox: number = 0
       if(this.submitUser.get('checktc').value == true) {
-        intcheckbox = 1;
+        intcheckbox = 1
       } else {
-        intcheckbox = 0;
+        intcheckbox = 0
       }
 
       var dataBody = {
@@ -158,19 +158,18 @@ export class CompleteDataPage implements OnInit {
           Toast.show({
             text: 'Yay! Registrasi berhasil'
           });
-          this.router.navigateByUrl('/login');
+          this.router.navigateByUrl('/login')
         } else {
           Toast.show({
             text: 'Registrasinya gagal, coba pakai email lain kak.'
-          });
+          })
         }
       }, error => {
-        console.log(error);
+        console.log(error)
         Toast.show({
           text: 'Koneksi internet terputus, silahkan dicoba lagi kak.'
-        });
+        })
       })
     }
   }
-
 }

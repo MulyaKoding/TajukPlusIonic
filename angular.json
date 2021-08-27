@@ -34,7 +34,13 @@
                 "glob": "**/*.svg",
                 "input": "src/assets/icon",
                 "output": "./svg"
+              },
+              {
+                "glob": "**/*.svg",
+                "input": "src/assets/logo",
+                "output": "./svg"
               }
+
             ],
             "styles": ["src/theme/variables.scss", "src/global.scss"],
             "scripts": [],

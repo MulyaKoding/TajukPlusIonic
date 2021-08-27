@@ -76,7 +76,7 @@ img {
     margin: 0 0 0 6px;
 }
 
-.cardpro-job {
+.cardpro-job-guest {
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
@@ -84,6 +84,16 @@ img {
     margin-top: 10px;
     right: 5px;
     color: #818181;
+}
+
+.cardpro-job-staff {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    margin-top: 10px;
+    right: 5px;
+    color: #3DBDCF;
 }
 
 .info-card {

@@ -1,41 +1,44 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button color="primary">
-        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-buttons slot="start">
-      <ion-button class="navigation" routerLink="/">Ubah Profil</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-header>
+    <ion-toolbar class="header-section">
+      <ion-buttons slot="start">
+        <ion-button color="primary">
+          <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button class="navigation">Ubah Profil</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content fullscreen>
   <div class="content-section">
-    <form>
-      <ion-label class="informasi-data-title">Informasi Data</ion-label>
-      <div class="informasi-data-border"></div>
-      <ion-input type="text" name="fullname" placeholder="Username"></ion-input>
-      <ion-input type="email" name="email" placeholder="Email"></ion-input>
-      <ion-input type="phone" name="phone" placeholder="Phone"></ion-input>
-      <ion-input type="text" name="nik" placeholder="NIK"></ion-input>
-      <ion-select placeholder="Pilih Provinsi" name="provinsi">
-        <ion-select-option value="11">DKI Jakarta</ion-select-option>
+     <form [formGroup]="changeUser" (ngSubmit)="changeForm()" novalidate>
+        <ion-label class="informasi-data-title">Informasi Data</ion-label>
+            <div class="informasi-data-border"></div><br> 
+        <ion-input type="text" formControlName="username"placeholder="Username"></ion-input>
+        <ion-input type="email" formControlName="email" placeholder="Email"></ion-input>
+        <ion-input type="phone" formControlName="phone" placeholder="Phone"></ion-input>
+        <ion-input type="text" formControlName="noktp" placeholder="No KTP"></ion-input>
+         <ion-select placeholder="Pilih Provinsi"  formControlName="provinsi" (click)="loadProvinces()">
+              <ion-select-option *ngFor="let province of provinces" value="{{province.id}}">{{province.name}}</ion-select-option>
+         </ion-select>
+        <ion-select placeholder="Pilih Kota" formControlName="kota" (click)="loadCities()">
+            <ion-select-option *ngFor="let city of cities" value="{{city.id}}">{{city.name}}</ion-select-option>
+        </ion-select>
+        <ion-select placeholder="Pilih Kecamatan" formControlName="kecamatan" (click)="loadDistricts()">
+          <ion-select-option *ngFor="let district of districts"value="{{district.id}}}">{{district.name}}</ion-select-option>
       </ion-select>
-      <ion-select placeholder="Pilih Kota" name="provinsi">
-        <ion-select-option value="154">Jakarta Timur</ion-select-option>
-      </ion-select>
-      <ion-select placeholder="Pilih Kecamatan" name="provinsi">
-        <ion-select-option value="1901">Cipayung</ion-select-option>
-      </ion-select>
-      <ion-button class="btn-ubh-profil" expand="block" (click)="registerAction()">Ubah Profil</ion-button>
-      <ion-label class="Ganti-Password-title">Ganti Password</ion-label>
-      <div class="Ganti-Password-border"></div>
-      <ion-input type="password" name="passwordlama" placeholder="Password Lama"></ion-input>
-      <ion-input type="password" name="passwordbaru" placeholder="Password Baru"></ion-input>
-      <ion-input type="password" name="confirmpass" placeholder="Konfirmasi Password"></ion-input>
-      <ion-button class="btn-ubh-pswd" expand="block" (click)="registerAction()">Ubah Password</ion-button>
+      <ion-button type="submit"class="btn-ubh-profil" expand="block" >Ubah Profil</ion-button>
     </form>
+
+    <form [formGroup]="changePassword" (ngsubmit)="changeNewPassword" novalidate>
+      <ion-label class="Ganti-Password-title">Ganti Password</ion-label>
+      <div class="Ganti-Password-border"></div><br>
+    <ion-input type="password" formControlName="lastpass" placeholder="Password Lama"></ion-input>
+    <ion-input type="password" formControlName="newpass" placeholder="Password Baru"></ion-input>
+    <ion-input type="password" formControlName="confirmpass" placeholder="Konfirmasi Password"></ion-input>
+    <ion-button type="submit" class="btn-ubh-pswd" expand="block">Ubah Password</ion-button>
+  </form>
   </div>
 </ion-content>

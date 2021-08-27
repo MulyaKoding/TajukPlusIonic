@@ -1,0 +1,335 @@
+ion-icon{
+    color: white;
+    width: 100%;
+  }
+  
+  ion-content{
+    z-index: 10;
+    position: absolute;
+    --background: rgba(1, 1, 1, 0);
+  }
+  
+  .navigation {
+    --color: white;
+    text-transform: capitalize;
+    margin-left: 0%;
+    margin-right: 0%;
+    font-size: 20px;
+  }
+  
+
+.header-section {
+  --background: linear-gradient(to bottom left, #3DBDCF, #55BF30);
+  padding-bottom: 40%;
+  padding-top: 0%;
+  z-index: 1; 
+  border-radius: 0px 0px 10px 10px;
+}
+
+.content-section-toolbar{
+  margin-top: 35%;
+  background-color: white;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 50px 50px 0px 0px;
+}
+
+.img-logo{
+  padding-top: 5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.text-main{
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 14px;
+}
+
+.card-title{
+  font-size: 16px;
+  margin-left: 0%;
+  margin-right: 0%;
+  text-align: left;
+  font-weight: bold;
+}
+
+.card.subtitle{
+  font-size: 14px;
+  margin-left: 0%;
+  margin-right: 0%;
+  text-align: left;
+}
+
+.img-privasi{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+}
+
+.btn-privasi{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; 
+}
+
+.btn-privasi-1{
+  padding-top: 2%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; 
+}
+
+.btn-privasi-2{
+  padding-top: 2%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; 
+}
+
+.btn-akun{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; 
+}
+
+.btn-akun-1{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; 
+}
+
+.btn-akun-2{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; 
+}
+
+.btn-info{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; 
+}
+
+.btn-info-1{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; 
+}
+
+.btn-info-2{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; 
+}
+
+
+.icon-privasi{
+  padding-left: auto;
+  padding-left: auto;
+  margin-left: auto;
+  margin-right: auto;
+  color: lightslategrey;
+ float: left;
+}
+
+.icon-privasi-1{
+  padding-left: auto;
+  padding-left: auto;
+  margin-left: auto;
+  margin-right: auto;
+ color: lightslategrey;
+ float: left;
+}
+
+.icon-privasi-2{
+  padding-left: auto;
+  padding-left: auto;
+  margin-left: auto;
+  margin-right: auto;
+  color: lightslategrey;
+  float: left;
+}
+
+.icon-akun{
+  padding-left: auto;
+  padding-left: auto;
+  margin-left: auto;
+  margin-right: auto;
+  color: lightslategrey;
+  float: left;
+}
+
+
+.icon-akun-1{
+  color: lightslategrey;
+  padding-left: auto;
+  padding-left: auto;
+  margin-left: auto;
+  margin-right: auto;
+ float: left;
+}
+
+.icon-akun-2{
+  color: lightslategrey;
+  padding-left: auto;
+  padding-left: auto;
+  margin-left: auto;
+  margin-right: auto;
+ float: left;
+}
+
+.icon-info{
+  padding-left: auto;
+  padding-left: auto;
+  margin-left: auto;
+  margin-right: auto;
+  color: lightslategrey;
+  float: left;
+}
+
+.icon-info-1{
+  padding-left: auto;
+  padding-left: auto;
+  margin-left: auto;
+  margin-right: auto;
+  color: lightslategrey;
+  float: left;
+}
+
+.icon-info-2{
+  padding-left: auto;
+  padding-left: auto;
+  margin-left: auto;
+  margin-right: auto;
+  color: lightslategrey;
+  float: left;
+}
+
+.text-btn{
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-right: 5%;
+  padding-left: 0%;
+  color: black;
+  float: right;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.text-btn-1{
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-right: 6%;
+  padding-left: 0%;
+  color: black;
+  float: right;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.text-btn-2{
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-right: 8%;
+  padding-left: 0%;
+  float: right;
+  color: black;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.text-btn-akun{
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-right: 27%;
+  padding-left: 0%;
+  float: right;
+  color: black;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.text-btn-akun-1{
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-right: 35%;
+  padding-left: 0%;
+  float: right;
+  color: black;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.text-btn-akun-2{
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-right: 28%;
+  padding-left: 0%;
+  float: right;
+  color: black;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.text-btn-info{
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-right: 40%;
+  padding-left: 0%;
+  float: right;
+  color: black;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.text-btn-info-1{
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-right: 40%;
+  padding-left: 0%;
+  float: right;
+  color: black;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+
+.text-btn-info-2{
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-right: 22%;
+  padding-left: 0%;
+  float: right;
+  color: black;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.img-keamananakun{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+}
+
+.img-apps{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%
+}

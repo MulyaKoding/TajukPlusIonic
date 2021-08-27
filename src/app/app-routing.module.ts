@@ -57,6 +57,26 @@ const routes: Routes = [
     loadChildren: () => import('./user/homepage/profile/edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
   },
   {
+    path: 'news',
+    loadChildren: () => import('./user/homepage/news/news/news.module').then( m => m.NewsPageModule)
+  },
+  {
+    path: 'job-history',
+    loadChildren: () => import('./user/homepage/profile/job-history/job-history.module').then( m => m.JobHistoryPageModule)
+  },
+  {
+    path: 'privacy-policy',
+    loadChildren: () => import('./user/homepage/profile/privacy-policy/privacy-policy.module').then( m => m.PrivacyPolicyPageModule)
+  },
+  {
+    path: 'edit-profile',
+    loadChildren: () => import('./user/homepage/profile/edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
+  },
+  {
+    path: 'terms-condition',
+    loadChildren: () => import('./user/homepage/profile/terms-condition/terms-condition.module').then( m => m.TermsConditionPageModule)
+  },
+  {
     path: 'homepage',
     loadChildren: () => import('./user/homepage/homepage.module').then( m => m.HomepagePageModule),
     canActivate: [AuthGuardService]

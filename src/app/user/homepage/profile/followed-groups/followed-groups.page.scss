@@ -1,67 +1,82 @@
-ion-icon {
+ion-icon{
     color: black;
-}
+  }
   
-ion-content {
+  ion-content{
     z-index: 1;
     position: absolute;
     --background: rgba(1, 1, 1, 0);
-}
+  }
   
-.header-section {
-    padding-bottom: 2%;
-    z-index: 10;
-}
-  
-.navigation {
+  .navigation {
     --color: black;
     text-transform: capitalize;
-}
+  }
   
-ion-content {
+  ion-content{
     z-index: 10;
     position: absolute;
     --background: rgba(1,1,1,0);
-}
+  }
   
-.content-section {
-    margin-bottom: 58%;
+  .conten-section{
+    margin-bottom: 28%;
     background-color: white;
     width: 100%;
     padding-top: 20%;
     padding-right: 15px;
     padding-left: 15px;
     border-radius: 50px 50px 0px 0px;
-}
+  }
 
 .navigation {
-    --color: black;
-    text-transform: capitalize;
+  --color: black;
+  text-transform: capitalize;
 }
 
-.profil-card {
+.profil-card{
+  width: 92%;
+  margin-top: 4%;
+  padding-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.profil-card-1{
     width: 92%;
-    margin-top: 16%;
+    margin-top: 4%;
     padding-top: 3%;
     margin-left: auto;
     margin-right: auto;
-}
+  }
 
-.profil-card1 {
+.profil-card-2{
     width: 92%;
-    margin-top: 3%;
+    margin-top: 4%;
     padding-top: 3%;
     margin-left: auto;
     margin-right: auto;
-}
+  }
 
-.profil-card2 {
+  .profil-card-3{
     width: 92%;
-    margin-top: 3%;
+    margin-top: 4%;
     padding-top: 3%;
     margin-left: auto;
     margin-right: auto;
-}
+  }
+
+
+  .profil-card-4{
+    width: 92%;
+    margin-top: 4%;
+    padding-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
 
 ion-row {
     margin-top: 3px;
@@ -76,16 +91,16 @@ img {
 }
 
 .image-group {
-    max-width: 25%;
+      max-width: 25%;
 }
 
 .content-group {
-    max-width: 50%;
-    overflow-x: hidden;
+      max-width: 50%;
+      overflow-x: hidden;
 }
 
 .delete-profil {
-    max-width: 25%;
+      max-width: 25%;
 }
   
 .group-name {
@@ -110,18 +125,19 @@ img {
     right: 10px;
 }
 
+
 ion-anchor {
     transition: all 500ms ease-in-out;
     display: block;
     text-align: center;
     font-weight: 300;
-    color:red;
-    font-size: 13px;
-}
+   color:red;
+   font-size: 13px;
+  }
   
-ion-anchor:hover {
+  ion-anchor:hover {
     border: 2px;
     border-color: #F00;
-    color: #fff679;
-}
+    color: #be79ff;
+  }
   

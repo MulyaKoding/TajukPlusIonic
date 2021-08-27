@@ -1,43 +1,46 @@
-<ion-header>
-  <ion-toolbar class="header-section">
-    <ion-buttons slot="start">
-      <ion-button color="primary">
-        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-buttons slot="start">
-      <ion-button class="navigation" href="/">Berita Disukai</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content padding fixed>
+  <ion-header>
+    <ion-toolbar class="header-section">
+      <ion-buttons slot="start">
+        <ion-button color="primary">
+          <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button class="navigation" href="/">Berita Disukai</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
   <div class="content-section">
+
     <ion-card class="news-card">
       <div class="news-img">
-        <img src="assets/icon/news/news1.jpeg" class="img-news">
+        <img src="assets/images/news/news1.jpeg" class="img-news">
       </div>
       <ion-card-content>
         <p class="news-title">Kasus Aktif Covid 19 Indonesia Terbanyak ke-4 di Asia</p>
-        <p class="news-content">Jakarta, CNN Indonesia. Indonesia menduduki posisi keempat kasus positif Covid-19 terbanyak di Asia menurut data Worldometers per 31 Juli dan 1 Agustus 2021. Pada Sabtu (31/7) kemarin, total kasus positif Covid-19 yang tercatat di Indonesia ada 3.409.658 dengan kasus tambahan 37.284 kasus.</p>
-        <ion-anchor (click)="btnClick()">Hapus Favorit</ion-anchor>
-      </ion-card-content>
+        <p class="news-content">Jakarta, CNN Indonesia. Indonesia menduduki posisi keempat kasus positif Covid-19 terbanyak di Asia menurut data Worldometers per 31 Juli dan 1 Agustus 2021.
+          Pada Sabtu (31/7) kemarin, total kasus positif Covid-19 yang tercatat di Indonesia ada 3.409.658 dengan kasus tambahan 37.284 kasus.</p>
+          <ion-anchor (click)="btnClick()">Hapus Favorit</ion-anchor>
+        </ion-card-content>
     </ion-card>
 
-    <ion-card class="news-card">
+    <ion-card class="news-card-2">
       <div class="news-img">
-        <img src="assets/icon/news/news2.jpeg" class="img-news">
+        <img src="assets/images/news/news2.jpeg" class="img-news">
       </div>
       <ion-card-content>
         <p class="news-title">Kisah-kisah Pilu Bocah yang jadi Yatim piatu akibat corona</p>
-        <p class="news-content">Solo,Pandemi virus Corona atau COVID-19 telah merenggut nyawa banyak orang. Tak sedikit anak-anak menjadi yatim piatu karena dua orang tuanya meninggal dunia usai COVID-19. detikcom merangkum sejumlah kisah pilu bocah yang kehilangan orang tuanya di wilayah Jawa Tengah dan Daerah Istimewa Yogyakarta (DIY).</p>
-        <ion-anchor (click)="btnClick()">Hapus Favorit</ion-anchor>
-      </ion-card-content>
+        <p class="news-content">Solo,Pandemi virus Corona atau COVID-19 telah merenggut nyawa banyak orang. Tak sedikit anak-anak menjadi yatim piatu karena dua orang tuanya meninggal dunia usai COVID-19.
+          detikcom merangkum sejumlah kisah pilu bocah yang kehilangan orang tuanya di wilayah Jawa Tengah dan Daerah Istimewa Yogyakarta (DIY).</p>
+          <ion-anchor (click)="btnClick()">Hapus Favorit</ion-anchor>
+        </ion-card-content>
     </ion-card>
 
-    <ion-card class="news-card">
+    <ion-card class="news-card-3">
       <div class="news-img">
-        <img src="assets/icon/news/news3.jpg" class="img-news">
+        <img src="assets/images/news/news3.jpg" class="img-news">
       </div>
       <ion-card-content>
         <p class="news-title">Cantiknya Pebulutangkis Myanmar diOlimpiade 2020, Dipuji netizen Indonesia</p>
@@ -46,9 +49,9 @@
       </ion-card-content>
     </ion-card>
 
-    <ion-card class="news-card">
+    <ion-card class="news-card-4">
       <div class="news-img">
-        <img src="assets/icon/news/news4.jpeg" class="img-news">
+        <img src="assets/images/news/news4.jpeg" class="img-news">
       </div>
       <ion-card-content>
         <p class="news-title">Periode PPKM Berakhir Besok, sudah meresakan 'Dine In' maksimal 20 menit</p>
@@ -57,9 +60,10 @@
       </ion-card-content>
     </ion-card>
 
-    <ion-card class="news-card">
+
+    <ion-card class="news-card-5">
       <div class="news-img">
-        <img src="assets/icon/news/news5.jpeg" class="img-news">
+        <img src="assets/images/news/news5.jpeg" class="img-news">
       </div>
       <ion-card-content>
         <p class="news-title">Vakin jadi syarat kegiatan warga DKI, Bagaimana bila belum bisa divaksinasi</p>
@@ -68,15 +72,17 @@
       </ion-card-content>
     </ion-card>
 
-    <ion-card class="news-card">
+    <ion-card class="news-card-6">
       <div class="news-img">
-        <img src="assets/icon/news/news6.jpeg" class="img-news">
+        <img src="assets/images/news/news6.jpeg" class="img-news">
       </div>
       <ion-card-content>
         <p class="news-title">Kronologi Rafi ahmad terpapar Covid-19, tertular dari Rafathar-Nagita Slavina</p>
-        <p class="news-content">Jakarta Ternyata bukan cuma Raffi Ahmad yang terpapar COVID-19 pada bulan lalu. Rafathar Malik Ahmad ternyata yang paling awal kena COVID-19. Raffi Ahmad menceritakan awal mula dirinya terpapar COVID-19. Dia menceritakan dirinya masih negatif saat Rafathar Malik Ahmad dan Nagita Slavina terpapar COVID-19.</p>
-        <ion-anchor (click)="btnClick()">Hapus Favorit</ion-anchor>
-      </ion-card-content>
+        <p class="news-content">
+          Jakarta Ternyata bukan cuma Raffi Ahmad yang terpapar COVID-19 pada bulan lalu. Rafathar Malik Ahmad ternyata yang paling awal kena COVID-19. Raffi Ahmad menceritakan awal mula dirinya terpapar COVID-19. Dia menceritakan dirinya masih negatif saat Rafathar Malik Ahmad dan Nagita Slavina terpapar COVID-19.</p>
+          <ion-anchor (click)="btnClick()">Hapus Favorit</ion-anchor>
+        </ion-card-content>
     </ion-card>
-  </div>
+
+</div>
 </ion-content>

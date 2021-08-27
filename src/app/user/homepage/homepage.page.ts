@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage-angular';
 import { AuthenticationService } from 'src/app/services/authentication/authentication.service';
 
@@ -18,7 +19,8 @@ export class HomepagePage implements OnInit {
 
   constructor(
     private storage: Storage,
-    private authService: AuthenticationService
+    private authService: AuthenticationService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -34,7 +36,10 @@ export class HomepagePage implements OnInit {
   }
 
   profile() {
-    this.authService.logout()
+    // this.router.navigate(['support'])
+    this.router.navigate(['edit-profile'])
+    // this.authService.logout()
+
   }
 
 }
