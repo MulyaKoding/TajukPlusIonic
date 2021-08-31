@@ -151,6 +151,9 @@ export class CompleteDataPage implements OnInit {
         'user_type': '3'
       };
 
+
+      
+
       this.http.post(this.endPoint + 'register',
         dataBody).subscribe(data => {
         console.log(data);
@@ -163,7 +166,8 @@ export class CompleteDataPage implements OnInit {
           Toast.show({
             text: 'Registrasinya gagal, coba pakai email lain kak.'
           })
-        }
+          }
+
       }, error => {
         console.log(error)
         Toast.show({

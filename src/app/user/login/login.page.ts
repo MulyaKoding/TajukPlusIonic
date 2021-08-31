@@ -54,8 +54,12 @@ export class LoginPage implements OnInit {
               id: data['data']['userid'],
               fullname: data['data']['fullname'],
               username: data['data']['username'],
+              ktp: data['data']['ktp'],
               email: data['data']['email'],
               phone: data['data']['phone'],
+              province: data['data']['province'],
+              city: data['data']['city'],
+              district: data['data']['district'],
               type: data['data']['user_type']
             };
             this.authService.login(userData)

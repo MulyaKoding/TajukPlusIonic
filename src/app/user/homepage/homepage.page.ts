@@ -36,9 +36,9 @@ export class HomepagePage implements OnInit {
   }
 
   profile() {
-    // this.router.navigate(['support'])
-    this.router.navigate(['edit-profile'])
+  
     // this.authService.logout()
+    this.router.navigate(['edit-profile'])
 
   }
 

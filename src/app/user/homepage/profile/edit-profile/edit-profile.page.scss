@@ -1,140 +1,140 @@
 ion-icon{
-    color: black;
-    width: 100%;
-  }
+  color: black;
+  width: 100%;
+}
+
+
+ion-content{
+  z-index: 10;
+  position:absolute ;
+}
+
+
+.content-section {
+  margin-top: 1%;
+  background-color: white;
+  width: 100%;
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
   
-  
-  ion-content{
-    z-index: 10;
-    position:absolute ;
-  }
-  
-  
-  .content-section {
-    margin-top: 1%;
-    background-color: white;
-    width: 100%;
-    padding-top: 20px;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  
-    
-  .navigation {
-    --color: black;
-    text-transform: capitalize;
-    font-size: 20px;
-  }
-  
-  
-  img {
-    width: 150px;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  
-  .informasi-data-border{
-    margin-top: 2px;
-    margin-left: 2%;
-    background-image: linear-gradient(#3DBDCF, #55BF30);
-    height: 3px;
-    width: 14%;
-  }
-  
-  .informasi-data-title {
-    margin-left: 2%;
-    font-size: 15px;
-    font-weight: 700;
-  }
-  
-  .Ganti-Password-border{
-    margin-top: 2px;
-    margin-left: 2%;
-    background-image: linear-gradient(#3DBDCF, #55BF30);
-    height: 3px;
-    width: 14%;
-  }
-  
-  .Ganti-Password-title{
-    margin-left: 2%;
-    font-size: 15px;
-    font-weight: 700;
-  }
-  
-  .btn-ubh-pswd{
-    --background: linear-gradient(to bottom left, #3DBDCF, #55BF30);
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 90%;
-    margin-left: 5%;
-    --border-radius: 45px 45px 45px 45px;
-    text-transform: capitalize;
-  }
-  
-  .btn-ubh-profil{
-    --background: linear-gradient(to bottom left, #3DBDCF, #55BF30);
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 90%;
-    margin-left: 5%;
-    --border-radius: 45px 45px 45px 45px;
-    text-transform: capitalize;
-  }
-  
-  
-  ion-anchor {
-    transition: all 500ms ease-in-out;
-    display: block;
-    text-align: center;
-    font-weight: 500;
-    color: rgb(117, 117, 117);
-  }
-  
-  
-  ion-select {
-    width: 97%;
-    margin-top: 20px;
-    margin-bottom: 12px;
-    padding: 15px;
-    border-radius: 20px;
-    background-color: rgba(231, 231, 231, 0.5);
-    text-indent: 20px;
-    transition: all 400ms ease-out;
-  }
-  
-  
-  
-  ion-select:hover{
-    box-shadow: 0px 0px 4px #3DBDCF, 0px 0px 4px #55BF30;
-  }
-  
-  ion-input[type=number] {
-    margin-top: 35px;
-  }
-  
-  ion-input {
-    width: 97%;
-    height: 50px;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    background-color: rgba(231, 231, 231, 0.5);
-    text-indent: 20px;
-    transition: all 400ms ease-out;
-  }
-  
-  ion-anchor:hover {
-    border: 2px;
-    border-color: #F00;
-    color: #fff679;
-  }
-  
-  ion-anchor {
-    transition: all 500ms ease-in-out;
-    display: block;
-    padding-top: 10px;
-    text-align: center;
-    font-weight: 500;
-    color: rgb(117, 117, 117);
-  }
+.navigation {
+  --color: black;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+
+img {
+  width: 150px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.informasi-data-border{
+  margin-top: 2px;
+  margin-left: 2%;
+  background-image: linear-gradient(#3DBDCF, #55BF30);
+  height: 3px;
+  width: 14%;
+}
+
+.informasi-data-title {
+  margin-left: 2%;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.Ganti-Password-border{
+  margin-top: 2px;
+  margin-left: 2%;
+  background-image: linear-gradient(#3DBDCF, #55BF30);
+  height: 3px;
+  width: 14%;
+}
+
+.Ganti-Password-title{
+  margin-left: 2%;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.btn-ubh-pswd{
+  --background: linear-gradient(to bottom left, #3DBDCF, #55BF30);
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 90%;
+  margin-left: 5%;
+  --border-radius: 45px 45px 45px 45px;
+  text-transform: capitalize;
+}
+
+.btn-ubh-profil{
+  --background: linear-gradient(to bottom left, #3DBDCF, #55BF30);
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 90%;
+  margin-left: 5%;
+  --border-radius: 45px 45px 45px 45px;
+  text-transform: capitalize;
+}
+
+
+ion-anchor {
+  transition: all 500ms ease-in-out;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  color: rgb(117, 117, 117);
+}
+
+
+ion-select {
+  width: 97%;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: rgba(231, 231, 231, 0.5);
+  text-indent: 20px;
+  transition: all 400ms ease-out;
+}
+
+
+
+ion-select:hover{
+  box-shadow: 0px 0px 4px #3DBDCF, 0px 0px 4px #55BF30;
+}
+
+ion-input[type=number] {
+  margin-top: 35px;
+}
+
+ion-input {
+  width: 97%;
+  height: 50px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: rgba(231, 231, 231, 0.5);
+  text-indent: 20px;
+  transition: all 400ms ease-out;
+}
+
+ion-anchor:hover {
+  border: 2px;
+  border-color: #F00;
+  color: #fff679;
+}
+
+ion-anchor {
+  transition: all 500ms ease-in-out;
+  display: block;
+  padding-top: 10px;
+  text-align: center;
+  font-weight: 500;
+  color: rgb(117, 117, 117);
+}
