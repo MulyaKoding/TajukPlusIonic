@@ -46,15 +46,13 @@ export class EditProfilePage implements OnInit {
   changeUser: FormGroup
   changePassword: FormGroup
   // endPoint = 'http://10.0.2.2:8000/api/' // <=== Testing APPS
-  endpoint = 'http://127.0.0.1:8000/api/' // <=== Testing WebView
+  endPoint = 'http://127.0.0.1:8000/api/' // <=== Testing WebView
 
   userData: UserData[] = []
 
-  editProfile:UserData
-
   provinces: Province[] = []
   cities: City[] = []
-  districts: District[] =[]
+  districts: District[] = []
 
   constructor(
     private formBuilder: FormBuilder,
@@ -65,16 +63,14 @@ export class EditProfilePage implements OnInit {
 
  
 
-  ngOnInit() {
-    this.storage.get('USER_DATA').then((response) => {
+  async ngOnInit() {
+     await this.storage.get('USER_DATA').then((response) => {
       this.userData = response
-      console.log(response)
       console.log(this.userData)
-      console.log(this.userData['username'])
     })
 
     this.changeUser = this.formBuilder.group({
-      username: ['', [Validators.required, Validators.minLength(6)]],
+      username: [this.userData['username'], [Validators.required, Validators.minLength(6)]],
       email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
       phone: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       noktp:['',[Validators.required, Validators.pattern('^[0-9]+$'), Validators.minLength(16), Validators.maxLength(16)]],
@@ -89,7 +85,7 @@ export class EditProfilePage implements OnInit {
       confirmpass: ['',[Validators.required]]
     })
    
-    this.http.get(this.endpoint + 'provinces').subscribe(
+    this.http.get(this.endPoint + 'provinces').subscribe(
       data => {
         if(data['success'] == true){
           this.provinces = data['data']
@@ -117,7 +113,7 @@ export class EditProfilePage implements OnInit {
   }
 
   loadCities(){
-    this.http.get(this.endpoint + 'cities/' + this.changeUser.get('provinsi').value)
+    this.http.get(this.endPoint + 'cities/' + this.changeUser.get('provinsi').value)
       .subscribe(data => {
         if(data['success'] == true){
           this.cities = data['data']
@@ -133,7 +129,7 @@ export class EditProfilePage implements OnInit {
   }
 
   loadDistricts(){
-    this.http.get(this.endpoint + 'districts/' + this.changeUser.get('kota').value)
+    this.http.get(this.endPoint + 'districts/' + this.changeUser.get('kota').value)
       .subscribe(data => {
         if(data['success'] == true) {
           this.districts = data['data']
@@ -141,20 +137,45 @@ export class EditProfilePage implements OnInit {
           this.districts = null
         }
       }, error => {
-        console.log(error);
+        console.log(error)
         this.districts = null
       }
     )
   }
 
   changeForm(){
-    if(!this.changeUser.valid) {
-      Toast.show({
-        text: 'Data yang kakak input belum lengkap. Dilengkapi dulu ya kak'
-      })
-    } else {
-     //this.http.put(this.endPoint + '', )
-    }
+    // if(!this.changeUser.valid) {
+    //   Toast.show({
+    //     text: 'Data yang kakak input belum lengkap. Dilengkapi dulu ya kak'
+    //   })
+    // } else {
+    //   let body = {
+    //     username: this.changeUser.get('username').value,
+    //     email: this.changeUser.get('email').value,
+    //     phone: this.changeUser.get('phone').value,
+    //     ktp: this.changeUser.get('noktp').value,
+    //     province: this.changeUser.get('provinsi').value,
+    //     city: this.changeUser.get('kota').value,
+    //     district: this.changeUser.get('kecamatan').value
+    //   }
+    //   this.http.put(this.endPoint + 'updateuser/' + this.userData["id"], body)
+    //     .subscribe(data => {
+    //       if(data['success'] == true) {
+    //         this.storage.set('USER_DATA', data)
+    //         Toast.show({
+    //           text: 'Data berhasil diubah'
+    //         })
+    //         console.log(this.storage.get('USER_DATA'))
+    //       } else {
+    //         Toast.show({
+    //           text: 'Data tidak berhasil diubah'
+    //         })
+    //       }
+    //     }, error => {
+    //       console.log(error)
+    //     }
+    //   )
+    // }
   }
 
   changeNewPassword(){

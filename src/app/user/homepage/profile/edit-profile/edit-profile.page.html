@@ -16,10 +16,10 @@
      <form [formGroup]="changeUser" (ngSubmit)="changeForm()" novalidate>
         <ion-label class="informasi-data-title">Informasi Data</ion-label>
             <div class="informasi-data-border"></div><br> 
-        <ion-input type="text" formControlName="username" placeholder="Username" value="{{ userData['username'] }}"></ion-input>
-        <ion-input type="email" formControlName="email" placeholder="Email" value="{{ userData['email'] }}"></ion-input>
-        <ion-input type="phone" formControlName="phone" placeholder="Phone" value="{{ userData['phone'] }}"></ion-input>
-        <ion-input type="text" formControlName="noktp" placeholder="No KTP" value="{{ userData['ktp'] }}"></ion-input>
+        <ion-input type="text" formControlName="username" placeholder="Username"></ion-input>
+        <ion-input type="email" formControlName="email" placeholder="Email"></ion-input>
+        <ion-input type="phone" formControlName="phone" placeholder="Phone"></ion-input>
+        <ion-input type="text" formControlName="noktp" placeholder="No KTP"></ion-input>
       
          <ion-select placeholder="Pilih Provinsi" formControlName="provinsi" (click)="loadProvinces()"selected>
               <ion-select-option *ngFor="let province of provinces" value="{{province.id}}">{{province.name}}</ion-select-option>

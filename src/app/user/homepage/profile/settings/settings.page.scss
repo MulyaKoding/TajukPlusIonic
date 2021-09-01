@@ -12,19 +12,7 @@ p {
     --color: black;
     text-transform: capitalize;
   }
-  
-  ion-toggle{
-  
-    --handle-background: grey;
-    --handle-background-checked: #00bfa5;
-    --handle-box-shadow: -4px 2px 4px 42px #b2dfdb;
 
-
-    border-radius: 15px;
-    max-width: 40px;
-    //--handle-box-shadow: 10px 16px 40px 42px linear-gradient(white, white); 
-  }
-  
   .notifikasi-border{
     margin-top: 6px;
     margin-left: 4%;
@@ -54,5 +42,52 @@ p {
     margin-left: 3.5%;
     font-size: 15px;
     font-weight: 700;
+  }
+  
+  input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  
+  label {
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+    background: grey;
+      opacity: 0.3;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+      transition: 0.3s;
+  }
+  
+  
+  input:checked + label {
+    background:  #4dc2ac;
+      opacity: 0.4;
+  }
+  
+  
+  label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 90px;
+    transition: 0.9s;
+  }
+  
+  input:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);  
+  }
+  
+  
+  label:active:after {
+    width: 130px;  
   }
   
