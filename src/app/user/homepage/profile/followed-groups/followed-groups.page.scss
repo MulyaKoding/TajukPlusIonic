@@ -32,6 +32,7 @@ ion-icon{
 .navigation {
   --color: black;
   text-transform: capitalize;
+  font-size: 18px;
 }
 
 .profil-card{
@@ -75,8 +76,6 @@ ion-icon{
     margin-left: auto;
     margin-right: auto;
   }
-
-
 
 ion-row {
     margin-top: 3px;
@@ -140,4 +139,10 @@ ion-anchor {
     border-color: #F00;
     color: #be79ff;
   }
-  
+
+  .alertCancel{
+    --background:red;
+    button.alertButton{
+      color: red;
+    }
+  }

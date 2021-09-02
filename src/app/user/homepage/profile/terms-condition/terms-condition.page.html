@@ -1,12 +1,12 @@
 <ion-header class="ion-no-border">
   <ion-toolbar class="header-section">
     <ion-buttons slot="start">
-      <ion-button color="primary">
-        <ion-icon size="large"slot="icon-only" name="chevron-back-outline"></ion-icon>
+      <ion-button color="primary" (click)="btnClicked()" routerLink="profil">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>  
     <ion-buttons slot="start">
-      <ion-button  class="navigation" href="/">Syarat & Ketentuan</ion-button>
+      <ion-button  class="navigation" href="/">Terms & Condition</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -21,7 +21,7 @@
     <ion-card-header>
       <ion-card-title class="card-title">Privasi</ion-card-title>
       <ion-card-subtitle class="card-subtitle">Kendalikan siapa yang melihat apa yang anda bagikan di Tajuk Plus, dan kelola data yang membantu kami mempersonalisai privasi Anda.</ion-card-subtitle>
-    </ion-card-header>
+    </ion-card-header> 
     <ion-button class="btn-privasi" fill="clear">
       <ion-icon class="icon-privasi"slot="start" name="build-outline"></ion-icon>
       <small class="text-btn">Tinjau beberapa pengaturan privasi penting</small>

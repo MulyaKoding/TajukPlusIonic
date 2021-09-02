@@ -17,12 +17,27 @@ export class FollowedGroupsPage implements OnInit {
 
   async btnClick() {
     const alert = await this.alertController.create({
+      
       header: 'Anda yakin ingin keluar dari grup?',
-      buttons: ['Ya', 'Tidak']
-    });
+      cssClass: 'alertCancel',
+      mode:'ios',
+      buttons:[
+        {
+          text: 'NO',
+          role: 'cancel',
+          cssClass: 'alertButton',
+          handler: () => {
+            console.log('Confirm Cancel');
+        }
+      },{
+        text: 'YES',
+          cssClass: 'alertButton',
+          handler: () => {
+            console.log('Confirm Okay');
+          }
+      }
+      ]
+    })
     await alert.present();
-    const result = await alert.onDidDismiss();
-    console.log(result);
   }
-
 }

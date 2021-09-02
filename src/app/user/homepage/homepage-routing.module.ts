@@ -23,6 +23,10 @@ const routes: Routes = [
   {
     path: 'news',
     loadChildren: () => import('./news/news/news.module').then( m => m.NewsPageModule)
+  },
+  {
+    path: 'news-search',
+    loadChildren: () => import('./news/news-search/news-search.module').then( m => m.NewsSearchPageModule)
   }
 
 ];

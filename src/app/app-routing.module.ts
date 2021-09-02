@@ -77,6 +77,10 @@ const routes: Routes = [
     loadChildren: () => import('./user/homepage/profile/terms-condition/terms-condition.module').then( m => m.TermsConditionPageModule)
   },
   {
+    path: 'news-search',
+    loadChildren: () => import('./user/homepage/news/news-search/news-search.module').then( m => m.NewsSearchPageModule)
+  },
+  {
     path: 'homepage',
     loadChildren: () => import('./user/homepage/homepage.module').then( m => m.HomepagePageModule),
     canActivate: [AuthGuardService]

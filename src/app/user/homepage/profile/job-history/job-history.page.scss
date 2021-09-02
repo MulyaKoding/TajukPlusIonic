@@ -13,6 +13,7 @@
     font-size: 1.1rem;
     font-weight: 400;
     color: #7f8490; 
+    
 }
 
 .tag-division{
@@ -24,11 +25,17 @@
 
 }
 
-.tag-btn-division-all{
- --background: linear-gradient(to bottom left, #3DBDCF, #55BF30);
- text-transform: capitalize;
- --border-radius: 45px 45px 45px 45px;
-}
+.tag-btn-division-general{
+    text-transform: capitalize;
+    --border-radius: 45px 45px 45px 45px;
+   }
+
+
+.tag-btn-division-general:hover{
+    color: white;   
+    transition: all 300ms ease-in-out;
+    --background: linear-gradient(to bottom left, #3DBDCF, #55BF30);
+   }
 
 .tag-btn-division-general{
     --background:none;

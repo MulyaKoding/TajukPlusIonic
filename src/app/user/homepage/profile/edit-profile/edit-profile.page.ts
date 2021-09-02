@@ -61,7 +61,9 @@ export class EditProfilePage implements OnInit {
     private router: Router
   ) {}
 
- 
+  btnClicked() {
+    this.router.navigateByUrl('home');
+  }
 
   async ngOnInit() {
      await this.storage.get('USER_DATA').then((response) => {
