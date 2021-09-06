@@ -36,10 +36,8 @@ export class HomepagePage implements OnInit {
   }
 
   profile() {
-  
     // this.authService.logout()
-    this.router.navigate(['edit-profile'])
-
+    this.router.navigate(['job-history'])
   }
 
 }
