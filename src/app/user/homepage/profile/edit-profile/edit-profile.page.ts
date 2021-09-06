@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Toast } from '@capacitor/toast';
-import { ModalController, NavParams } from '@ionic/angular';
+import { ModalController, NavParams, ToastController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { AuthenticationService } from 'src/app/services/authentication/authentication.service';
 import { NavparamService } from 'src/app/services/navparam/navparam.service';
@@ -59,7 +59,8 @@ export class EditProfilePage implements OnInit {
     private storage: Storage,
     private http: HttpClient,
     private router: Router,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+    public  toastController: ToastController,
   ) {}
 
   testAmount: any = 0;
@@ -152,41 +153,73 @@ export class EditProfilePage implements OnInit {
     )
   }
 
-  changeForm(){
-     if(!this.changeUser.valid) {
-       Toast.show({
-         text: 'Data yang kakak input belum lengkap. Dilengkapi dulu ya kak'
-       })
-     } else {
-       let body = {
-        username: this.changeUser.get('username').value,
-        email: this.changeUser.get('email').value,
-        phone: this.changeUser.get('phone').value,
-        ktp: this.changeUser.get('noktp').value,
-        province: this.changeUser.get('provinsi').value,
-         city: this.changeUser.get('kota').value,
-        district: this.changeUser.get('kecamatan').value
-       }
-      this.http.put(this.endPoint + 'updateuser/' + this.userData["id"], body)
-       .subscribe(data => {
-          if(data['success'] == true) {
-            this.storage.set('USER_DATA', data)
-          Toast.show({
-          text: 'Data berhasil diubah'
-            })
-           console.log(this.storage.get('USER_DATA'))
-         } else {
-           Toast.show({
-             text: 'Data tidak berhasil diubah'
+  
+  async changeForm(){
+    if(!this.changeUser.valid) {
+      Toast.show({
+        text: 'Data yang kakak input belum lengkap. Dilengkapi dulu ya kak'
+      })
+    } else {
+      let body = {
+       username: this.changeUser.get('username').value,
+       email: this.changeUser.get('email').value,
+       phone: this.changeUser.get('phone').value,
+       ktp: this.changeUser.get('noktp').value,
+       province: this.changeUser.get('provinsi').value,
+        city: this.changeUser.get('kota').value,
+       district: this.changeUser.get('kecamatan').value
+      }
+     this.http.put(this.endPoint + 'updateuser/' + this.userData["id"], body)
+      .subscribe(data => {
+         if(data['success'] == true) {
+           this.storage.set('USER_DATA', data)
+         Toast.show({
+         text: 'Data berhasil diubah'
            })
-         }
-       }, error => {
-          console.log(error)
-         }
-       )
+          console.log(this.storage.get('USER_DATA'))
+        } else {
+          Toast.show({
+            text: 'Data tidak berhasil diubah'
+          })
+        }
+      }, error => {
+         console.log(error)
+        }
+      )
+   }
+   
+    }
+
+  async  changeNewPassword(){
+
+    if (!this.changePassword.valid){
+      Toast.show({
+        text: 'Data yang kakak masukan belum lengkap. Mohon dilengkapi dulu iya kak'
+      })
+    } else {
+      let body ={
+        lastpass: this.changeUser.get('lastpass').value,
+        newpass: this.changeUser.get('newpass').value,
+        confirmpass: this.changeUser.get('cofirmpass').value
+    }
+    this.http.put(this.endPoint + 'updateuser/' + this.userData["id"], body)
+    .subscribe(data => {
+      if(data['success'] == true) {
+        this.storage.set('USER_DATA' ,data) 
+        Toast.show({
+          text: 'Password berhasil diubah'
+        })
+        console.log(this.storage.get('USER_DATA'))
+      } else {
+        Toast.show({
+          text: 'Password tidak berhasil diubah'
+        })
+      }
+    }, error => {
+        console.log(error)
+      }
+      )
+ 
+      }
     }
   }
-
-  changeNewPassword(){
-  }
-}
