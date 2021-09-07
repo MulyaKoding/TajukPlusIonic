@@ -27,8 +27,7 @@ const routes: Routes = [
   {
     path: 'news-search',
     loadChildren: () => import('./news/news-search/news-search.module').then( m => m.NewsSearchPageModule)
-  }
-
+  },
 ];
 
 @NgModule({

@@ -1,125 +1,27 @@
 <ion-content>
-<ion-header class="ion-no-border">
-  <ion-toolbar class="header-section">
-    <ion-buttons slot="start">
-      <ion-button color="primary">
-        <ion-icon size="large"slot="icon-only" name="chevron-back-outline"></ion-icon>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-button color="primary" (click)="btnClicked" routerLink="home">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-buttons slot="start">
-      <ion-button class="navigation" href="/">Privacy Policy</ion-button>
-    </ion-buttons>
+    <ion-title>Privacy Policy</ion-title>
   </ion-toolbar>
 </ion-header>
 
-  <ion-toolbar class="content-section-toolbar">
-    <img src="assets/logo/logo.png" class="img-logo">
+<div class="padding"> 
+  <ion-card-title class="title">Privacy Policy</ion-card-title>
+  <ion-card-subtitle class="subtitle">Tajuk Plus respects the privacy of the personal information and your data and will ensure compliance by its staff to the strictest standards of security and confidentiality in respect of all personal information and data submitted by you via the Site and Tajuk Plus will not, subject to the terms herein, release such information to anyone without your prior consent (whether registered or not)..</ion-card-subtitle>
+  <ion-card-subtitle class="subtitle-desc">You are strongly recommended to read this privacy statement (“Privacy Statement”) carefully to have an understanding of Tajuk Plus policy and practices with regard to the treatment of personal information and data provided by Users on the Site. This Privacy Statement is applicable to both registered and unregistered Users, and the terms herein may be updated, revised, varied and/or amended from time to time as Tajuk Plus may deem necessary and/or appropriate.</ion-card-subtitle>
+  <ion-card-subtitle class="title-1">Retention of Personal Data.</ion-card-subtitle>
+  <ion-card-subtitle class="subtitle-desc">Once Tajuk Plus has obtained your personal information and/or data, it will be maintained securely in Tajuk Plus system for the period necessary to fulfill the purposes for which the data was collected as set out under the section headed “Purpose of Collection of Personal Data”. Once registered, you may terminate your membership of the Site by contacting Tajuk Plus using the contact details under the section headed “Enquiries”. Tajuk Plus may retain your personal information even after you have closed your account if retention is reasonably necessary to comply with our legal obligations, meet regulatory requirements, resolve disputes between Users, prevent fraud and abuse, or enforce this Privacy Statement and the Terms and Conditions.</ion-card-subtitle>
+  <ion-card-subtitle class="title-1">Changes in this Privacy Statement.</ion-card-subtitle>
+  <ion-card-subtitle class="subtitle-desc">Tajuk Plus reserves the right to update, revise, modify or amend this Privacy Statement at any time as Tajuk Plus deems necessary, so you are strongly recommended to review this Privacy Statement frequently. If Tajuk Plus decides to update, revise, modify or amend this Privacy Statement, Tajuk Plus will post those changes to this webpage and/or other places as Tajuk Plus deems appropriate, so that you would be aware of what information Tajuk Plus collects, how Tajuk Plus uses it, and under what circumstances, if any, Tajuk Plus discloses it.</ion-card-subtitle>
+  <ion-card-subtitle class="subtitle-desc">If Tajuk Plus makes material changes to this Privacy Statement, Tajuk Plus will notify you on this Apps, by email, or by means of a notice on the home page of Tajuk Plus.</ion-card-subtitle>
+  <ion-card-subtitle class="title-1">Enquiries.</ion-card-subtitle>
+  <ion-card-subtitle class="subtitle-desc">Should you have any enquiries relating to this Privacy Statement, please contact us through the chat facilities available on the Site or email Tajuk Plus  or write to us at the following address</ion-card-subtitle>
+</div>
 
-    <ion-card>
-      <ion-card-header>
-      <ion-card-title class="card-title">Akun</ion-card-title>
-      <ion-card-subtitle class="card-subtitle">Perbarui info Anda untuk menjaga keamanan akun Anda
-      </ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-button class="btn-akun" fill="clear">
-      <ion-icon class="icon-akun" slot="start" name="people-circle"></ion-icon> 
-      <small class="text-akun">Informasi Pribadi dan Akun</small>
-      </ion-button>
-      
-      <ion-button class="btn-keamanan" fill="clear">
-        <Ion-icon class="icon-keamanan" slot="start" name="hardware-chip"></Ion-icon>
-        <small class="text-keamanan"> Kata Sandi dan Keamanan</small>
-      </ion-button>
-
-      <ion-button class="btn-pembayaran" fill="clear">
-        <ion-icon class="icon-pembayaran" slot="start" name="ribbon"></ion-icon>
-        <small class="text-pembayaran">Pembayaran</small> 
-      </ion-button>
-    </ion-card> <br>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title class="card-title">Preferensi</ion-card-title>
-        <ion-card-subtitle class="card-subtitle">Modifikasi pengalaman Anda di Tajuk Plus</ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-button class="btn-beranda" fill="clear">
-        <ion-icon class="icon-beranda" slot="start" name="desktop"></ion-icon>
-        <small class="text-beranda">Kabar Beranda</small>
-      </ion-button>
-
-      <ion-button class="btn-media" fill="start">
-        <ion-icon class="icon-media" slot="start" name="logo-youtube"></ion-icon>
-        <small class="text-media">Media</small>
-      </ion-button>
-
-      <ion-button class="btn-user-time" fill="clear">
-        <ion-icon class="icon-user-time" slot="start" name="timer"></ion-icon>
-        <small class="text-user-time">Waktu Anda di Tajuk Plus</small>
-      </ion-button>
-
-      <ion-button class="btn-mode" fill="clear">
-        <ion-icon class="icon-mode" slot="start" name="moon"></ion-icon>
-        <small class="text-mode">Mode Gelap</small>
-      </ion-button>
-    </ion-card><br>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title class="card-title">Izin</ion-card-title>
-        <ion-card-subtitle class="card-subtitle">Kelola info yang digunakan Tajuk Plus untuk menjadikan pengalaman Anda lebih baik, seperti minat dan lokasi Anda.</ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-button class="btn-preferensi" fill="clear">
-        <ion-icon class="icon-preferensi" slot="start" name="film"></ion-icon>
-        <small class="text-preferensi">Prefrensi Iklan</small>
-      </ion-button>
-
-      <ion-button class="btn-lokasi" fill="clear">
-        <ion-icon class="icon-lokasi" slot="start" name="locate"></ion-icon>
-        <small class="text-lokasi">Lokasi</small>
-      </ion-button>
-
-      <ion-button class="btn-work"  fill="clear">
-        <ion-icon class="icon-work" slot="start" name="wallet-sharp"></ion-icon>
-        <small class="text-work">Lowongan kerja / Recruitment</small>
-      </ion-button>
-    </ion-card><br>
-
-    <ion-card>
-      <ion-card-header >
-        <ion-card-title class="card-title">Standar Komunitas dan Kebijakan Hukum</ion-card-title>
-        <ion-card-subtitle class="card-subtitle">Berbagai ketentuan-ketentuan dan kebijakan di dalam Aplikasi Tajuk Plus</ion-card-subtitle>
-      </ion-card-header>
-      
-      <ion-button class="btn-ketentuan" fill="clear">
-        <ion-icon class="icon-ketentuan" slot="start" name="reader-sharp"></ion-icon>
-        <small class="text-ketentuan"> Ketentuan Layanan</small>
-      </ion-button>
-
-      <ion-button class="btn-kebijakan-data" fill="clear">
-        <ion-icon class="icon-kebijakan-data" slot="start" name="server-sharp"></ion-icon>
-        <small class="text-kebijakan-data"> Kebijakan Data</small>
-      </ion-button>
-
-      <ion-button class="btn-kebijakan-cookie" fill="clear">
-        <ion-icon class="icon-kebijakan-cookie" slot="start" name="code-sharp"></ion-icon>
-        <small class="text-kebijakan-cookie"> Kebijakan Cookie</small>
-      </ion-button>
-
-      <ion-button class="btn-standar-komunitas" fill="clear">
-        <ion-icon class="icon-standar-komunitas" slot="start" name="checkmark-circle-sharp"></ion-icon>
-        <small class="text-standar-komunitas"> Standar Komunitas</small>
-      </ion-button>
-
-      <ion-button class="btn-tentang" fill="clear">
-        <ion-icon class="icon-tentang" slot="start" name="information-circle-sharp"></ion-icon>
-        <small class="text-tentang">Tentang</small>
-      </ion-button>
-
-    </ion-card><br>
-
-  </ion-toolbar>
 
 </ion-content>
