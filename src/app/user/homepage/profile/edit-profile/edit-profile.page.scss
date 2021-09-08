@@ -3,12 +3,10 @@ ion-icon{
   width: 100%;
 }
 
-
 ion-content{
   z-index: 10;
   position:absolute ;
 }
-
 
 .content-section {
   margin-top: 1%;
@@ -19,13 +17,11 @@ ion-content{
   padding-left: 15px;
 }
 
-  
 .navigation {
   --color: black;
   text-transform: capitalize;
   font-size: 20px;
 }
-
 
 img {
   width: 150px;
@@ -91,7 +87,6 @@ ion-anchor {
   color: rgb(117, 117, 117);
 }
 
-
 ion-select {
   width: 97%;
   margin-top: 20px;
@@ -102,7 +97,6 @@ ion-select {
   text-indent: 20px;
   transition: all 400ms ease-out;
 }
-
 
 
 ion-select:hover{

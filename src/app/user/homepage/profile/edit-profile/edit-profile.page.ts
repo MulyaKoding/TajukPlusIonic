@@ -5,8 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Toast } from '@capacitor/toast';
 import { ModalController, NavParams, ToastController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
-import { AuthenticationService } from 'src/app/services/authentication/authentication.service';
-import { NavparamService } from 'src/app/services/navparam/navparam.service';
+
 
 interface Province {
   id: number
@@ -43,13 +42,14 @@ interface UserData {
   styleUrls: ['./edit-profile.page.scss'],
 })
 export class EditProfilePage implements OnInit {
+
   changeUser: FormGroup
   changePassword: FormGroup
+
   // endPoint = 'http://10.0.2.2:8000/api/' // <=== Testing APPS
   endPoint = 'http://127.0.0.1:8000/api/' // <=== Testing WebView
-
+  
   userData: UserData[] = []
-
   provinces: Province[] = []
   cities: City[] = []
   districts: District[] = []
@@ -62,12 +62,6 @@ export class EditProfilePage implements OnInit {
     private modalCtrl: ModalController,
     public  toastController: ToastController,
   ) {}
-
-  testAmount: any = 0;
-
-  editProfile(){
-    
-  }
 
   btnClicked() {
     this.router.navigateByUrl('home');
@@ -153,8 +147,7 @@ export class EditProfilePage implements OnInit {
     )
   }
 
-  
-  async changeForm(){
+  changeForm(){
     if(!this.changeUser.valid) {
       Toast.show({
         text: 'Data yang kakak input belum lengkap. Dilengkapi dulu ya kak'
@@ -187,11 +180,9 @@ export class EditProfilePage implements OnInit {
         }
       )
    }
-   
-    }
+  }
 
-  async  changeNewPassword(){
-
+  changeNewPassword(){
     if (!this.changePassword.valid){
       Toast.show({
         text: 'Data yang kakak masukan belum lengkap. Mohon dilengkapi dulu iya kak'
@@ -217,9 +208,7 @@ export class EditProfilePage implements OnInit {
       }
     }, error => {
         console.log(error)
-      }
-      )
- 
+      } )
       }
     }
   }

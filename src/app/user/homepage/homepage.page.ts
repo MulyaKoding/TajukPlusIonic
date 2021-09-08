@@ -37,7 +37,6 @@ export class HomepagePage implements OnInit {
 
   profile() {
     // this.authService.logout()
-    this.router.navigate(['privacy-policy'])
+   this.router.navigate(['edit-profile'])
   }
-
 }

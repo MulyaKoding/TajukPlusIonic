@@ -47,29 +47,31 @@ ion-icon {
   }
   
   .data-card{
-      display: inline-flex;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      box-shadow: none;
-      background-color: rgba(1,1,1,0);
+    display: inline-flex;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  box-shadow: none;
+  background-color: rgba(1, 1, 1, 0);
   }
   
   .data-card > ion-card-content{
-      padding: 10px 10px 10px 0;
+    padding: 10px 10px 10px 0px;
   }
   
   .data-img-wrapper{
-      overflow: hidden;
-      margin: 4px 0px 0px 0px;
+    overflow: hidden;
+    min-width: 45%;
+    max-width: 45%;
+    margin: 4px 0 0 0;
   }
   
   .data-img{
-      height: 155px;
-      width: 1000px;
-      border-radius: 20px;
-      padding: 10px 10px 10px 10px;
-      margin:0px;
-      object-fit: cover;
+    height: 135px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    margin: 0px;
+    object-fit: cover;
   }
   
   .data-text-title{

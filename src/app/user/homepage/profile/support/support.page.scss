@@ -1,5 +1,6 @@
 ion-icon {
     color: white;
+    width: 100%;
   }
   ion-content {
     z-index: 1;
@@ -17,20 +18,20 @@ ion-icon {
     --background: rgba(1,1,1,0);
   }
   .navigation {
-    font-size: 16px;
+    font-size: 20px;
     --color: white;
     text-transform: capitalize;
   }
 
-  ion-searchbar{
+  ion-searchbar{  
    width: 80%;
    font-size: 15px;
-   transform: scaleY(0.9);
-   transform: scalex(0.9);
+   transform: scaleY(1);
+   transform: scalex(1);
   }
   
   .content-section {
-    margin-top: 15%;
+    margin-top: 10%;
     background-color: white;
     width: 100%;
     padding-top: 15px;
@@ -52,10 +53,8 @@ ion-icon {
   }
   
   
-  
-  
   .searchbar{
-    margin-top: 20%;
+    margin-top: 17%;
     max-width: 90%;
     border-radius: 25px;
     background-position: left 8px center;
@@ -70,7 +69,7 @@ ion-icon {
   }
   
   .yang-ditanyakan-title{
-    font-size: 18git px;
+    font-size: 18px;
     font-weight: 600;
     margin-left: 4%;
   }
@@ -79,6 +78,8 @@ ion-icon {
       float: left;
       padding-top: 1.5%;
       padding-left: 5%;
+      margin-left: 0%;
+      margin-right: 0%;
   
   }
 
@@ -86,36 +87,48 @@ ion-icon {
     float: left;
     padding-top: 1.5%;
     padding-left: 5%;
+    margin-left: 0%;
+    margin-right: 0%;
 
 }
 
   .img-data-2{
     float: left;
     padding-top: 1.5%;
-    padding-left: 5%;
+    padding-left: 0%;
+    margin-left: -9%;
+    margin-right: 0%;
 
   }
 
   
   .button-right{
-    bottom: 8px;
-    padding-right: 370px;
+    bottom: 1px;
+    margin-left: 179px;
+    margin-right: 0px;
     width: 150%;
     height: 170%;
   }
 
   .button-right-1{
-    bottom: 8px;
-    padding-right: 370px;
+    bottom: 1px;
+    margin-left: 200px;
+    margin-right: 0px;
     width: 150%;
     height: 170%;
   }
 
   .button-right-2{
-    bottom: 8px;
-    padding-right: 370px;
+    bottom: 1px;
+    margin-left: 220px;
+    margin-right: 0px;
     width: 150%;
     height: 170%;
+  }
+
+  .card-section{
+    margin-left: 3%;
+    margin-right: 3%;
   }
   
   .call.user1{
@@ -135,11 +148,8 @@ ion-icon {
   
   .data-user{
        font-size: smaller;
-  }
-  
-  .img-data-facebook{
-      padding-left: 4pt;
-      float: left;
+       margin-left: 0%;
+       margin-right: 0%;
   }
   
   

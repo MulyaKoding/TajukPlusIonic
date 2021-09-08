@@ -29,87 +29,44 @@ ion-icon{
     padding-left: 15px;
     border-radius: 50px 50px 0px 0px;
   }
-  .news-card{
-    margin-bottom: 8%;
-    display: inline-flex;
-    box-shadow: none;
-    background-color: rgba(1,1,1,0);
-  }
-  
-  .news-card-2{
-    padding-bottom: 5%;
-    padding-top: 0%;
-    display: inline-flex;
-    margin-top: 0%;
-    box-shadow: none;
-    background-color: rgba(1,1,1,0);
-  }
-  
-  .news-card-3{
-    padding-bottom: 5%;
-    padding-top: 0%;
-    display: inline-flex;
-    margin-top: 0%;
-    box-shadow: none;
-    background-color: rgba(1,1,1,0);
-  }
-  
-  
-  .news-card-4{
-    padding-bottom: 5%;
-    padding-top: 0%;
-    display: inline-flex;
-    margin-top: 0%;
-    box-shadow: none;
-    background-color: rgba(1,1,1,0);
-  }
-  
-  .news-card-5{
-    padding-bottom: 5%;
-    padding-top: 0%;
-    display: inline-flex;
-    margin-top: 0%;
-    box-shadow: none;
-    background-color: rgba(1,1,1,0);
-  }
-  
-  .news-card-6{
-    padding-bottom: 10%;
-    padding-top: 0%;
-    display: inline-flex;
-    margin-top: 0%;
-    box-shadow: none;
-    background-color: rgba(1,1,1,0);
-  }
-  
-  
-  
-  .news-card > ion-card-content{
-    padding: 10px 10px 10px 0;
-  }
+
+.like-news{
+  display: inline-flex;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  box-shadow: none;
+  background-color: rgba(1, 1, 1, 0);
+}
+ 
+.like-news > ion-card-content{
+  padding: 10px 10px 10px 0px;
+}
   
   .news-img{
     overflow: hidden;
-    margin: 4px 0px 0px 0px;
+    min-width: 45%;
+    max-width: 45%;
+    margin: 4px 0 0 0;
   }
+
   
   .img-news{
-    height: 155px;
-    width: 1000px;
+    height: 135px;
+    width: 100%;
     border-radius: 20px;
     padding: 10px 10px 10px 10px;
-    margin:0px;
+    margin: 0px;
     object-fit: cover;
   }
   
   .news-title{
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     color: black;
   }
   
   .news-content{
-    font-size: 10px;
+    font-size: 11px;
     text-align: justify;
     text-justify: inter-word;
   }
@@ -120,7 +77,7 @@ ion-icon{
     text-align: center;
     font-weight: 300;
    color:red;
-   font-size: 13px;
+   font-size: 14px;
   }
   
   ion-anchor:hover {

@@ -22,15 +22,15 @@
         <ion-input type="text" formControlName="noktp" placeholder="No KTP"></ion-input>
       
          <ion-select placeholder="Pilih Provinsi" formControlName="provinsi" (click)="loadProvinces()"selected>
-              <ion-select-option *ngFor="let province of provinces" value="{{province.id}}">{{province.name}}</ion-select-option>
+              <ion-select-option value="01" *ngFor="let province of provinces" value="{{province.id}}">{{province.name}}</ion-select-option>
          </ion-select>
 
         <ion-select placeholder="Pilih Kota" formControlName="kota" (click)="loadCities()">
-            <ion-select-option *ngFor="let city of cities" value="{{city.id}}">{{city.name}}</ion-select-option>
+            <ion-select-option value="01" *ngFor="let city of cities" value="{{city.id}}">{{city.name}}</ion-select-option>
         </ion-select>
 
         <ion-select placeholder="Pilih Kecamatan" formControlName="kecamatan" (click)="loadDistricts()">
-          <ion-select-option *ngFor="let district of districts"value="{{district.id}}}">{{district.name}}</ion-select-option>
+          <ion-select-option value="01" *ngFor="let district of districts"value="{{district.id}}}">{{district.name}}</ion-select-option>
         </ion-select>
 
       <ion-button type="submit"class="btn-ubh-profil" expand="block" >Ubah Profil</ion-button>

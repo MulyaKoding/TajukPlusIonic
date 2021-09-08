@@ -84,9 +84,7 @@ const routes: Routes = [
     path: 'homepage',
     loadChildren: () => import('./user/homepage/homepage.module').then( m => m.HomepagePageModule),
     canActivate: [AuthGuardService]
-  },
-
-
+  }
 ];
 
 @NgModule({
