@@ -16,13 +16,13 @@
      <form [formGroup]="changeUser" (ngSubmit)="changeForm()" novalidate>
         <ion-label class="informasi-data-title">Informasi Data</ion-label>
             <div class="informasi-data-border"></div><br> 
-        <ion-input type="text" formControlName="username" placeholder="Username"></ion-input>
-        <ion-input type="email" formControlName="email" placeholder="Email"></ion-input>
-        <ion-input type="phone" formControlName="phone" placeholder="Phone"></ion-input>
-        <ion-input type="text" formControlName="noktp" placeholder="No KTP"></ion-input>
+        <ion-input type="text" formControlName="username" placeholder="Username"> {{this.userData.username}} </ion-input>
+        <ion-input type="email" formControlName="email" placeholder="Email"> {{this.userData.email}} </ion-input>
+        <ion-input type="phone" formControlName="phone" placeholder="Phone">{{this.userData.phone}}</ion-input>
+        <ion-input type="text" formControlName="noktp" placeholder="No KTP">{{this.userData.ktp}}</ion-input>
       
          <ion-select placeholder="Pilih Provinsi" formControlName="provinsi" (click)="loadProvinces()"selected>
-              <ion-select-option value="01" *ngFor="let province of provinces" value="{{province.id}}">{{province.name}}</ion-select-option>
+              <ion-select-option value="01" *ngFor="let province of provinces" value="{{province.id}}">{{province.name}} {{this.userData.province}}</ion-select-option>
          </ion-select>
 
         <ion-select placeholder="Pilih Kota" formControlName="kota" (click)="loadCities()">
@@ -30,7 +30,7 @@
         </ion-select>
 
         <ion-select placeholder="Pilih Kecamatan" formControlName="kecamatan" (click)="loadDistricts()">
-          <ion-select-option value="01" *ngFor="let district of districts"value="{{district.id}}}">{{district.name}}</ion-select-option>
+          <ion-select-option value="01" *ngFor="let district of districts"value="{{district.id}}">{{district.name}}</ion-select-option>
         </ion-select>
 
       <ion-button type="submit"class="btn-ubh-profil" expand="block" >Ubah Profil</ion-button>

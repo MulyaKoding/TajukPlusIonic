@@ -154,14 +154,15 @@ export class EditProfilePage implements OnInit {
       })
     } else {
       let body = {
-       username: this.changeUser.get('username').value,
-       email: this.changeUser.get('email').value,
-       phone: this.changeUser.get('phone').value,
-       ktp: this.changeUser.get('noktp').value,
-       province: this.changeUser.get('provinsi').value,
+        username: this.changeUser.get('username').value,
+        email: this.changeUser.get('email').value,
+        phone: this.changeUser.get('phone').value,
+        ktp: this.changeUser.get('noktp').value,
+        province: this.changeUser.get('provinsi').value,
         city: this.changeUser.get('kota').value,
-       district: this.changeUser.get('kecamatan').value
+        district: this.changeUser.get('kecamatan').value
       }
+      console.log(body)
      this.http.put(this.endPoint + 'updateuser/' + this.userData["id"], body)
       .subscribe(data => {
          if(data['success'] == true) {
