@@ -67,8 +67,8 @@ export class EditProfilePage implements OnInit {
     this.router.navigateByUrl('home');
   }
 
-  async ngOnInit() {
-     await this.storage.get('USER_DATA').then((response) => {
+   ngOnInit() {
+      this.storage.get('USER_DATA').then((response) => {
       this.userData = response
       console.log(this.userData)
     })
@@ -170,6 +170,7 @@ export class EditProfilePage implements OnInit {
          text: 'Data berhasil diubah'
            })
           console.log(this.storage.get('USER_DATA'))
+          this.router.navigate(['/edit-profile'])
         } else {
           Toast.show({
             text: 'Data tidak berhasil diubah'
