@@ -57,13 +57,13 @@ export class EditProfilePage implements OnInit {
   districts: District[] = []
 
   constructor(
-    private formBuilder: FormBuilder,
-    private storage: Storage,
-    private http: HttpClient,
-    private router: Router,
-    private modalCtrl: ModalController,
-    public  toastController: ToastController,
-    private authService: AuthenticationService
+      private formBuilder: FormBuilder,
+      private storage: Storage,
+      private http: HttpClient,
+      private router: Router,
+      private modalCtrl: ModalController,
+      public  toastController: ToastController,
+      private authService: AuthenticationService
   ) {}
 
   btnClicked() {
@@ -115,8 +115,8 @@ export class EditProfilePage implements OnInit {
   }
 
   loadProvinces(){
-    this.changeUser.get('kota').setValue(0)
-    this.changeUser.get('kecamatan').setValue(0)
+      this.changeUser.get('kota').setValue(0)
+      this.changeUser.get('kecamatan').setValue(0)
   }
 
   loadCities(){
@@ -193,29 +193,32 @@ export class EditProfilePage implements OnInit {
       })
     } else {
       let body = {
-        lastpass: this.changePassword.get('lastpass').value,
-        password: this.changePassword.get('password').value,
-        confirmpass: this.changePassword.get('confirmpass').value
+          lastpass: this.changePassword.get('lastpass').value,
+          password: this.changePassword.get('password').value,
+          confirmpass: this.changePassword.get('confirmpass').value
     }
       console.log(body)
       this.http.put(this.endPoint + 'updatepassword/' + this.userData["id"], body)
       .subscribe(data => {
-        if(data['success'] == true) {
+        console.log(data);
+          if(data['success'] == true) {
+            this.storage.set('USER_DATA', data['data'])
+            console.log(data)
+            Toast.show({
+              text: 'Password berhasil diubah'
+            })
+            this.router.navigate(['profile'])
+          } else {
+            Toast.show({
+              text: 'Password tidak berhasil diubah'
+            })
+          }
+        }, error => {
           Toast.show({
-            text: 'Password berhasil diubah'
+            text: 'Sedang mengalami gangguan coba beberapa saat lagi kak'
           })
-          this.router.navigate(['profile'])
-        } else {
-          Toast.show({
-            text: 'Password tidak berhasil diubah'
-          })
-        }
-      }, error => {
-        Toast.show({
-          text: 'Sedang mengalami gangguan coba beberapa saat lagi kak'
+          console.log(error)
         })
-        console.log(error)
-      })
     }
   }
 }
