@@ -2,7 +2,7 @@
   <ion-header>
     <ion-toolbar class="header-section">
       <ion-buttons slot="start">
-        <ion-button color="primary" (click)="btnClicked()" routerLink="home">
+        <ion-button color="primary" (click)="btnClicked()">
           <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
@@ -22,29 +22,29 @@
         <ion-input type="text" formControlName="noktp" placeholder="No KTP">{{this.userData.ktp}}</ion-input>
       
          <ion-select placeholder="Pilih Provinsi" formControlName="provinsi" (click)="loadProvinces()"selected>
-              <ion-select-option value="01" *ngFor="let province of provinces" value="{{province.id}}">{{province.name}} {{this.userData.province}}</ion-select-option>
+              <ion-select-option value="{{province.id}}" *ngFor="let province of provinces">{{province.name}}</ion-select-option>
          </ion-select>
 
         <ion-select placeholder="Pilih Kota" formControlName="kota" (click)="loadCities()">
-            <ion-select-option value="01" *ngFor="let city of cities" value="{{city.id}}">{{city.name}}</ion-select-option>
+            <ion-select-option value="{{city.id}}" *ngFor="let city of cities">{{city.name}}</ion-select-option>
         </ion-select>
 
         <ion-select placeholder="Pilih Kecamatan" formControlName="kecamatan" (click)="loadDistricts()">
-          <ion-select-option value="01" *ngFor="let district of districts"value="{{district.id}}">{{district.name}}</ion-select-option>
+          <ion-select-option value="{{district.id}}" *ngFor="let district of districts">{{district.name}}</ion-select-option>
         </ion-select>
 
       <ion-button type="submit"class="btn-ubh-profil" expand="block" >Ubah Profil</ion-button>
     </form>
 
-    <form [formGroup]="changePassword" (ngsubmit)="changeNewPassword" novalidate>
+    <form [formGroup]="changePassword" (ngSubmit)="changeNewPassword()" novalidate>
 
-    <ion-label class="Ganti-Password-title">Ganti Password</ion-label>
-   
-    <div class="Ganti-Password-border"></div><br>
-    <ion-input type="password" formControlName="lastpass" placeholder="Password Lama"></ion-input>
-    <ion-input type="password" formControlName="newpass" placeholder="Password Baru"></ion-input>
-    <ion-input type="password" formControlName="confirmpass" placeholder="Konfirmasi Password"></ion-input>
-    <ion-button type="submit" class="btn-ubh-pswd" expand="block">Ubah Password</ion-button>
+      <ion-label class="Ganti-Password-title">Ganti Password</ion-label>
+      <div class="Ganti-Password-border"></div><br>
+
+      <ion-input type="password" formControlName="lastpass" placeholder="Password Lama"></ion-input>
+      <ion-input type="password" formControlName="password" placeholder="Password Baru"></ion-input>
+      <ion-input type="password" formControlName="confirmpass" placeholder="Konfirmasi Password"></ion-input>
+      <ion-button type="submit" class="btn-ubh-pswd" expand="block">Ubah Password</ion-button>
 
     </form>
   </div>

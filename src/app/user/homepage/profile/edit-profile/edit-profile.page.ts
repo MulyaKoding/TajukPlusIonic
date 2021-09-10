@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Toast } from '@capacitor/toast';
 import { ModalController, NavParams, ToastController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
+import { AuthenticationService } from 'src/app/services/authentication/authentication.service';
 
 
 interface Province {
@@ -34,6 +35,7 @@ interface UserData {
   province: string
   city: string
   district: string
+  password:string
 }
 
 @Component({
@@ -61,10 +63,11 @@ export class EditProfilePage implements OnInit {
     private router: Router,
     private modalCtrl: ModalController,
     public  toastController: ToastController,
+    private authService: AuthenticationService
   ) {}
 
   btnClicked() {
-    this.router.navigateByUrl('home');
+    this.authService.logout()
   }
 
    ngOnInit() {
@@ -74,7 +77,7 @@ export class EditProfilePage implements OnInit {
     })
 
     this.changeUser = this.formBuilder.group({
-      username: [this.userData['username'], [Validators.required, Validators.minLength(6)]],
+      username: ['', [Validators.required, Validators.minLength(6)]],
       email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
       phone: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       noktp:['',[Validators.required, Validators.pattern('^[0-9]+$'), Validators.minLength(16), Validators.maxLength(16)]],
@@ -85,7 +88,7 @@ export class EditProfilePage implements OnInit {
 
     this.changePassword = this.formBuilder.group({
       lastpass: ['',[Validators.required]],
-      newpass: ['',[Validators.required]],
+      password: ['',[Validators.required]],
       confirmpass: ['',[Validators.required]]
     })
    
@@ -162,16 +165,15 @@ export class EditProfilePage implements OnInit {
         city: this.changeUser.get('kota').value,
         district: this.changeUser.get('kecamatan').value
       }
-      console.log(body)
      this.http.put(this.endPoint + 'updateuser/' + this.userData["id"], body)
       .subscribe(data => {
          if(data['success'] == true) {
-           this.storage.set('USER_DATA', data)
-         Toast.show({
-         text: 'Data berhasil diubah'
+          this.storage.set('USER_DATA', data['data'])
+          Toast.show({
+            text: 'Data berhasil diubah'
            })
-          console.log(this.storage.get('USER_DATA'))
-          this.router.navigate(['/edit-profile'])
+           console.log(this.storage.get('USER_DATA'))
+          this.router.navigate(['homepage'])
         } else {
           Toast.show({
             text: 'Data tidak berhasil diubah'
@@ -181,7 +183,7 @@ export class EditProfilePage implements OnInit {
          console.log(error)
         }
       )
-   }
+    }
   }
 
   changeNewPassword(){
@@ -190,27 +192,30 @@ export class EditProfilePage implements OnInit {
         text: 'Data yang kakak masukan belum lengkap. Mohon dilengkapi dulu iya kak'
       })
     } else {
-      let body ={
-        lastpass: this.changeUser.get('lastpass').value,
-        newpass: this.changeUser.get('newpass').value,
-        confirmpass: this.changeUser.get('cofirmpass').value
+      let body = {
+        lastpass: this.changePassword.get('lastpass').value,
+        password: this.changePassword.get('password').value,
+        confirmpass: this.changePassword.get('confirmpass').value
     }
-    this.http.put(this.endPoint + 'updateuser/' + this.userData["id"], body)
-    .subscribe(data => {
-      if(data['success'] == true) {
-        this.storage.set('USER_DATA' ,data) 
+      console.log(body)
+      this.http.put(this.endPoint + 'updatepassword/' + this.userData["id"], body)
+      .subscribe(data => {
+        if(data['success'] == true) {
+          Toast.show({
+            text: 'Password berhasil diubah'
+          })
+          this.router.navigate(['profile'])
+        } else {
+          Toast.show({
+            text: 'Password tidak berhasil diubah'
+          })
+        }
+      }, error => {
         Toast.show({
-          text: 'Password berhasil diubah'
+          text: 'Sedang mengalami gangguan coba beberapa saat lagi kak'
         })
-        console.log(this.storage.get('USER_DATA'))
-      } else {
-        Toast.show({
-          text: 'Password tidak berhasil diubah'
-        })
-      }
-    }, error => {
         console.log(error)
-      } )
-      }
+      })
     }
   }
+}
