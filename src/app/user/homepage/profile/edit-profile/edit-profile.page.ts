@@ -215,7 +215,7 @@ export class EditProfilePage implements OnInit {
           }
         }, error => {
           Toast.show({
-            text: 'Sedang mengalami gangguan coba beberapa saat lagi kak'
+            text: 'Sedang mengalami gangguan coba beberapa saat lagi kak ya '
           })
           console.log(error)
         })
