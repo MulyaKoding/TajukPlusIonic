@@ -6,12 +6,12 @@ import { Toast } from '@capacitor/toast';
 import { Storage } from '@ionic/storage-angular';
 import { NavparamService } from 'src/app/services/navparam/navparam.service';
 
-interface City {
+interface City{
   id: number
   name: string
 }
 
-interface District {
+interface District{
   id: number
   name: string
 }

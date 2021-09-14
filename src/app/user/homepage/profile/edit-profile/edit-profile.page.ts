@@ -44,13 +44,10 @@ interface UserData {
   styleUrls: ['./edit-profile.page.scss'],
 })
 export class EditProfilePage implements OnInit {
-
   changeUser: FormGroup
   changePassword: FormGroup
-
   // endPoint = 'http://10.0.2.2:8000/api/' // <=== Testing APPS
   endPoint = 'http://127.0.0.1:8000/api/' // <=== Testing WebView
-  
   userData: UserData[] = []
   provinces: Province[] = []
   cities: City[] = []
@@ -75,7 +72,6 @@ export class EditProfilePage implements OnInit {
       this.userData = response
       console.log(this.userData)
     })
-
     this.changeUser = this.formBuilder.group({
       username: ['', [Validators.required, Validators.minLength(6)]],
       email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
@@ -85,13 +81,11 @@ export class EditProfilePage implements OnInit {
       kota: ['',[Validators.required]],
       kecamatan:['',[Validators.required]]
     })
-
     this.changePassword = this.formBuilder.group({
       lastpass: ['',[Validators.required]],
       password: ['',[Validators.required]],
       confirmpass: ['',[Validators.required]]
     })
-   
     this.http.get(this.endPoint + 'provinces').subscribe(
       data => {
         if(data['success'] == true){

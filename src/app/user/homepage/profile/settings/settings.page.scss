@@ -15,7 +15,7 @@ p {
 
   .notifikasi-border{
     margin-top: 6px;
-    margin-left: 4%;
+    margin-left: 3%;
     background-image: linear-gradient(#3DBDCF, #55BF30);
     height: 1.5px;
     width: 14%;
@@ -24,22 +24,21 @@ p {
   
   .umum-border{
     margin-top: 6px;
-    margin-left: 4%;
+    margin-left: 3%;
     background-image: linear-gradient(#3DBDCF, #55BF30);
-    height: 1.5px;
-    width: 14%; 
+    height: 2px;
+    width: 11%; 
     margin-bottom: 2%;
   }
   
   .notifikasi-terbaru-title{
-    margin-left: 3.5%;
+    margin-left: 3%;
     font-size: 15px;
     font-weight: 700;
-  
   }
   
   .umum-title{
-    margin-left: 3.5%;
+    margin-left: 3%;
     font-size: 15px;
     font-weight: 700;
   }
@@ -62,12 +61,10 @@ p {
       transition: 0.5s;
   }
   
-  
   input:checked + label {
     background:  #4dc2ac;
       opacity: 0.5;
   }
-  
   
   label:after {
     content: '';
@@ -85,7 +82,6 @@ p {
     left: calc(100% - 5px);
     transform: translateX(-100%);  
   }
-  
   
   label:active:after {
     width: 130px;  

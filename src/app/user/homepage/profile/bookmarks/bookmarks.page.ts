@@ -15,15 +15,27 @@ export class BookmarksPage implements OnInit {
   ngOnInit() {
   }
 
-  async btnClick() {
-    const alert = await this.alertController.create({
+  async btnClick(title, message, yesHandler, noHandler, caller) {
+      const alert = await this.alertController.create({
       header: 'Apakah anda yakin berita ini ingin dihapus?',
       message: 'Hapus Favorit?',
-      buttons: ['No', 'Yes']
-    });
-    await alert.present();
-    const result = await alert.onDidDismiss();
-    console.log(result);
+      cssClass:'alert-wrapper',
+      buttons: [
+        {
+            text: 'Ya',
+            cssClass: 'ya-button',
+            handler: () => yesHandler(caller)
+        },
+        {
+            text: 'Tidak',
+            role: 'cancel',
+            cssClass: 'cancel-button',
+            handler: () => noHandler(caller)
+        }
+    ]
+      });
+        alert.present();
+    }
   }
 
-}
+

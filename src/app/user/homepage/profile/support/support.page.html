@@ -2,8 +2,7 @@
   <ion-toolbar class="header-section">
     <ion-buttons slot="start">
       <ion-button color="primary">
-        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
-
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon> 
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="start">
@@ -12,7 +11,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen>
   <div>
     <center> <ion-searchbar placeholder="Temukan Solusi Anda"  showCancelButton="focus" class="searchbar">
     </ion-searchbar></center>
@@ -22,18 +21,19 @@
       Yang sering ditanyakan
     </ion-label>
       <ion-list>
-        <ion-item class="data-description">Pengaturan Akun / Profile di Tajuk Plus</ion-item>
-        <ion-item class="data-description" >Login dan Kata Sandi di Tajuk Plus</ion-item>
-        <ion-item class="data-description" >Privasi dan Keamanan di Tajuk Plus</ion-item>
-        <ion-item class="data-description" >News di Tajuk Plus</ion-item>
-        <ion-item class="data-description" >Chat di Tajuk Plus</ion-item>
-        <ion-item class="data-description">Grup di Tajuk Plus</ion-item>
-        <ion-item class="data-description" >Halaman di Tajuk Plus</ion-item>
+        <ion-item class="data-description">What files can i view?</ion-item>
+        <ion-item class="data-description" >How do i share files?</ion-item>
+        <ion-item class="data-description" >How do i view files offline?</ion-item>
+        <ion-item class="data-description" >How do i play videos?</ion-item>
+        <ion-item class="data-description" >How do i upload files?</ion-item>
+        <ion-item class="data-description">Why do you need location data?</ion-item>
+        <ion-item class="data-description" >How do i set passcode?</ion-item>
+        <ion-item class="data-description">How much i can news pay ?</ion-item>
+        <ion-item class="data-description">How do i delete files?</ion-item>
+        <ion-item class="data-description">How do i use chat from apps Tajuk Plus?</ion-item>
       </ion-list><br>
-
     <ion-label class="yang-ditanyakan-title">
       Hubungi Kami
-
     </ion-label>
     <div class="card-section">
       <left><img  class="img-data" src="assets/icon/email.JPG"> </left>
@@ -80,18 +80,19 @@
   </div>
 </ion-content>
 
+<script>
+  const searchbar = document.querySelector('ion-searchbar');
+  const items = Array.from(document.querySelector('ion-list').children);
 
-  <script>
-    const searchbar = document.querySelector('ion-searchbar');
-    const items = Array.from(document.querySelector('ion-list').children);
-    searchbar.addEventListener('ionInput', handleInput);
-    function handleInput(event) {
-      const query = event.target.value.toLowerCase();
-      requestAnimationFrame(() => {
-        items.forEach(item => {
-          const shouldShow = item.textContent.toLowerCase().indexOf(query) > 1;
-          item.style.display = shouldShow ? 'block' : 'none';
-        });
+  searchbar.addEventListener('ion-input', handleInput);
+
+  function handleInput(event){
+    const query = event.target.value.toLowerCase();
+    requestAnimationFrame(() => {
+      items.forEach(items => {
+        const shouldShow = item.textContent.toLowerCase().indexOf(query) >-1;
+        item.style.display =  shouldShow ? 'block' : 'none';
       });
-    }
-  </script>
+    });
+  }
+</script>

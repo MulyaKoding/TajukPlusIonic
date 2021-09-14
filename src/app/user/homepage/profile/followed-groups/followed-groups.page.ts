@@ -15,29 +15,25 @@ export class FollowedGroupsPage implements OnInit {
   ngOnInit() {
   }
 
-  async btnClick() {
+  async btnClick(title, message, yesHandler, noHandler, caller) {
     const alert = await this.alertController.create({
-      
-      header: 'Anda yakin ingin keluar dari grup?',
-      cssClass: 'alertCancel',
-      mode:'ios',
-      buttons:[
-        {
-          text: 'NO',
+    header: 'Anda yakin ingin keluar dari Group?',
+    cssClass:'alert-wrapper',
+    buttons: [
+      {
+          text: 'Ya',
+          cssClass: 'ya-button',
+          handler: () => yesHandler(caller)
+      },
+      {
+          text: 'Tidak',
           role: 'cancel',
-          cssClass: 'alertButton',
-          handler: () => {
-            console.log('Confirm Cancel');
-        }
-      },{
-        text: 'YES',
-          cssClass: 'alertButton',
-          handler: () => {
-            console.log('Confirm Okay');
-          }
+          cssClass: 'cancel-button',
+          handler: () => noHandler(caller)
       }
-      ]
-    })
-    await alert.present();
+  ]
+    });
+      alert.present();
   }
 }
+
