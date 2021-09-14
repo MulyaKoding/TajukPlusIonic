@@ -192,7 +192,7 @@ export class EditProfilePage implements OnInit {
           confirmpass: this.changePassword.get('confirmpass').value
     }
       console.log(body)
-      this.http.put(this.endPoint + 'updatepassword/' + this.userData["id"], body)
+      this.http.post(this.endPoint + 'updatepassword/' + this.userData["id"], body)
       .subscribe(data => {
         console.log(data);
           if(data['success'] == true) {
@@ -201,7 +201,7 @@ export class EditProfilePage implements OnInit {
             Toast.show({
               text: 'Password berhasil diubah'
             })
-            this.router.navigate(['profile'])
+            this.router.navigate(['homepage'])
           } else {
             Toast.show({
               text: 'Password tidak berhasil diubah'
