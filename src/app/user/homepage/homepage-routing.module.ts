@@ -9,10 +9,6 @@ const routes: Routes = [
     component: HomepagePage
   },
   {
-    path: 'job-history',
-    loadChildren: () => import('./profile/job-history/job-history.module').then( m => m.JobHistoryPageModule)
-  },
-  {
     path: 'privacy-policy',
     loadChildren: () => import('./profile/privacy-policy/privacy-policy.module').then( m => m.PrivacyPolicyPageModule)
   },

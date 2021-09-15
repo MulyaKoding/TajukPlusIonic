@@ -8,6 +8,7 @@ import { AuthenticationService } from 'src/app/services/authentication/authentic
   templateUrl: './homepage.page.html',
   styleUrls: ['./homepage.page.scss'],
 })
+
 export class HomepagePage implements OnInit {
   userData = {
     photo: '',
@@ -37,7 +38,6 @@ export class HomepagePage implements OnInit {
 
   profile() {
     // this.authService.logout()
-
-   this.router.navigate(['edit-profile'])
+    this.router.navigate(['change-bank-account'])
   }
 }

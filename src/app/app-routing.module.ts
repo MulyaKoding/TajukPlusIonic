@@ -61,10 +61,6 @@ const routes: Routes = [
     loadChildren: () => import('./user/homepage/news/news/news.module').then( m => m.NewsPageModule)
   },
   {
-    path: 'job-history',
-    loadChildren: () => import('./user/homepage/profile/job-history/job-history.module').then( m => m.JobHistoryPageModule)
-  },
-  {
     path: 'privacy-policy',
     loadChildren: () => import('./user/homepage/profile/privacy-policy/privacy-policy.module').then( m => m.PrivacyPolicyPageModule)
   },

@@ -83,9 +83,7 @@
 <script>
   const searchbar = document.querySelector('ion-searchbar');
   const items = Array.from(document.querySelector('ion-list').children);
-
   searchbar.addEventListener('ion-input', handleInput);
-
   function handleInput(event){
     const query = event.target.value.toLowerCase();
     requestAnimationFrame(() => {

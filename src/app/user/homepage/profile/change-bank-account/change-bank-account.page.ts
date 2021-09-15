@@ -3,8 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup , Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Toast } from '@capacitor/toast';
+import { ModalController, ToastController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
-import { NavparamService } from 'src/app/services/navparam/navparam.service';
+import { AuthenticationService } from 'src/app/services/authentication/authentication.service';
 
 interface City{
   id: number
@@ -16,6 +17,11 @@ interface District{
   name: string
 }
 
+interface userDataBank{
+  id:number
+  name:string
+}
+
 @Component({
   selector: 'app-change-bank-account',
   templateUrl: './change-bank-account.page.html',
@@ -23,7 +29,7 @@ interface District{
 })
 export class ChangeBankAccountPage implements OnInit {
 
-  changeUser: FormGroup
+   changeUser: FormGroup
    // endPoint = 'http://10.0.2.2:8000/api/' // <=== Testing APPS
    endPoint = 'http://127.0.0.1:8000/api/' // <=== Testing WebView
    phoneNum = ''
@@ -32,11 +38,13 @@ export class ChangeBankAccountPage implements OnInit {
    districts: District[] =[]
 
   constructor(
-    private navParamService: NavparamService,
     private formBuilder: FormBuilder,
     private storage: Storage,
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private modalCtrl:ModalController,
+    public toastController: ToastController,
+    private authService: AuthenticationService
   ) { }
 
   ngOnInit() {
@@ -45,9 +53,9 @@ export class ChangeBankAccountPage implements OnInit {
     })
 
     this.changeUser = this.formBuilder.group({
-      nama_pemilik_bank: ['',[Validators.required, Validators.minLength(4)]],
-      rekening_bank: ['',[Validators.required, Validators.minLength(4)]],
-      jenis_bank: ['',[Validators.required, Validators.minLength(4)]],
+      ownerbank: ['',[Validators.required, Validators.minLength(4)]],
+      accountnumber: ['',[Validators.required, Validators.minLength(4)]],
+      bankname: ['',[Validators.required, Validators.minLength(4)]],
       kota: ['',[Validators.required]],
       kecamatan:['',[Validators.required]]
     })
@@ -87,7 +95,6 @@ export class ChangeBankAccountPage implements OnInit {
         }
       );
     }
-    
 
     changeForm(){
       if(!this.changeUser.valid) {
@@ -97,21 +104,20 @@ export class ChangeBankAccountPage implements OnInit {
         return false
       } else {
         var dataBody = {
-          'nama_pemilik_bank': this.changeUser.get('nama_pemilik_bank').value,
-          'rekening_bank' : this.changeUser.get('rekening_bank').value,
-          'jenis_bank' : this.changeUser.get('jenis_bank').value,
-          'city': this.changeUser.get('kota').value,
-          'district': this.changeUser.get('kecamatan').value,
+          ownerbank : this.changeUser.get('ownerbank').value,
+          accountnumber: this.changeUser.get('accountnumber'),
+          bankname : this.changeUser.get('bankname').value,
+          city: this.changeUser.get('kota').value,
+          district: this.changeUser.get('kecamatan').value,
         };
-    
-        this.http.post(this.endPoint + 'change-bank-account',
+        this.http.put(this.endPoint + 'change-bank-account',
         dataBody).subscribe(data => {
           console.log(data);
           if(data['success'] == true) {
             Toast.show({
               text: 'Berhasil ubah profil'
             });
-            this.router.navigateByUrl('/profil')
+            this.router.navigateByUrl('homepage')
           } else {
             Toast.show({
               text:'Ubah Profil gagal, coba cek kembali email dan ulangi kembali'

@@ -11,6 +11,7 @@ export class SupportPage implements OnInit {
 
   ngOnInit() {
   }
+   
 
- 
+
 }
