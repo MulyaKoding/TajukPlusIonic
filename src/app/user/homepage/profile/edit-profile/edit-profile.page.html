@@ -15,7 +15,7 @@
   <div class="content-section">
      <form [formGroup]="changeUser" (ngSubmit)="changeForm()" novalidate>
         <ion-label class="informasi-data-title">Informasi Data</ion-label>
-            <div class="informasi-data-border"></div><br> 
+        <div class="informasi-data-border"></div><br> 
         <ion-input type="text" formControlName="username" placeholder="Username"> {{this.userData.username}} </ion-input>
         <ion-input type="email" formControlName="email" placeholder="Email"> {{this.userData.email}} </ion-input>
         <ion-input type="phone" formControlName="phone" placeholder="Phone">{{this.userData.phone}}</ion-input>
@@ -37,15 +37,12 @@
     </form>
 
     <form [formGroup]="changePassword" (ngSubmit)="changeNewPassword()" novalidate>
-
       <ion-label class="Ganti-Password-title">Ganti Password</ion-label>
       <div class="Ganti-Password-border"></div><br>
-
       <ion-input type="password" formControlName="lastpass" placeholder="Password Lama"></ion-input>
       <ion-input type="password" formControlName="password" placeholder="Password Baru"></ion-input>
       <ion-input type="password" formControlName="confirmpass" placeholder="Konfirmasi Password"></ion-input>
       <ion-button type="submit" class="btn-ubh-pswd" expand="block">Ubah Password</ion-button>
-
     </form>
   </div>
 </ion-content>

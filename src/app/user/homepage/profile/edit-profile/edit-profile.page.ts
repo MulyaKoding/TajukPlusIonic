@@ -7,7 +7,6 @@ import { ModalController, NavParams, ToastController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { AuthenticationService } from 'src/app/services/authentication/authentication.service';
 
-
 interface Province {
   id: number
   name: string
@@ -20,7 +19,7 @@ interface City {
 
 interface District {
   id: number
-  name: string
+  name: string  
 }
 
 interface UserData {

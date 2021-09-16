@@ -17,9 +17,12 @@ interface District{
   name: string
 }
 
-interface userDataBank{
-  id:number
-  name:string
+interface UserDataBank{
+  ownerbank:string
+  accountnumber:number
+  bankname:number
+  city: string
+  district:string
 }
 
 @Component({
@@ -28,12 +31,11 @@ interface userDataBank{
   styleUrls: ['./change-bank-account.page.scss'],
 })
 export class ChangeBankAccountPage implements OnInit {
-
    changeUser: FormGroup
    // endPoint = 'http://10.0.2.2:8000/api/' // <=== Testing APPS
    endPoint = 'http://127.0.0.1:8000/api/' // <=== Testing WebView
-   phoneNum = ''
-
+   
+   userDataBank: UserDataBank[] = []
    cities: City[] = []
    districts: District[] =[]
 
@@ -47,10 +49,14 @@ export class ChangeBankAccountPage implements OnInit {
     private authService: AuthenticationService
   ) { }
 
-  ngOnInit() {
-    this.storage.get("USER_DATA").then((response)=>{
-      this.phoneNum = response['phone'];
-    })
+      btnClicked(){
+        this.authService.logout()
+      }
+
+     ngOnInit() {
+      this.storage.get("USER_DATA").then((response)=>{
+        this.userDataBank = response
+      })
 
     this.changeUser = this.formBuilder.group({
       ownerbank: ['',[Validators.required, Validators.minLength(4)]],
@@ -75,10 +81,9 @@ export class ChangeBankAccountPage implements OnInit {
     );
     }
 
-    
-  loadCities(){
-    this.changeUser.get('kecamatan').setValue(0)
-  }
+    loadCities(){
+      this.changeUser.get('kecamatan').setValue(0)
+    }
 
     loadDistricts(){
       this.http.get(this.endPoint + 'districts/0' + this.changeUser.get('kota').value)
@@ -96,22 +101,22 @@ export class ChangeBankAccountPage implements OnInit {
       );
     }
 
-    changeForm(){
+   changeForm(){
       if(!this.changeUser.valid) {
         Toast.show({
           text: 'Formnya Belum Terisi Semua, Silahkan mengisi kembali'
         })
         return false
       } else {
-        var dataBody = {
-          ownerbank : this.changeUser.get('ownerbank').value,
-          accountnumber: this.changeUser.get('accountnumber'),
-          bankname : this.changeUser.get('bankname').value,
+        let body = {
+          ownerbank: this.changeUser.get('ownerbank').value,
+          accountnumber: this.changeUser.get('accountnumber').value,
+          bankname: this.changeUser.get('bankname').value,
           city: this.changeUser.get('kota').value,
           district: this.changeUser.get('kecamatan').value,
         };
-        this.http.put(this.endPoint + 'change-bank-account',
-        dataBody).subscribe(data => {
+        this.http.put(this.endPoint + 'change-bank-account'+ this.userDataBank["id"],body)
+        .subscribe(data => {
           console.log(data);
           if(data['success'] == true) {
             Toast.show({
@@ -131,4 +136,4 @@ export class ChangeBankAccountPage implements OnInit {
         }) 
       }
     }
-  }
+  } 

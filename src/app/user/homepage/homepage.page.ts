@@ -38,6 +38,6 @@ export class HomepagePage implements OnInit {
 
   profile() {
     // this.authService.logout()
-    this.router.navigate(['change-bank-account'])
+    this.router.navigate(['bookmarks'])
   }
 }
