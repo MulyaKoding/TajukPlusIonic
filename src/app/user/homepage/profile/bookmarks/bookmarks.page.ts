@@ -50,8 +50,7 @@ export class BookmarksPage implements OnInit {
       console.log(this.news)
     })
   }
-
-
+  
   async btnClick(title, message, yesHandler, noHandler, caller) {
       const alert = await this.alertController.create({
       header: 'Apakah anda yakin berita ini ingin dihapus?',

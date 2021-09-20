@@ -1,87 +1,87 @@
 ion-icon{
-    color: black;
-  }
-  
-  ion-content{
-    z-index: 1;
-    position: absolute;
-    --background: rgba(1, 1, 1, 0);
-  }
-  
-  .navigation {
-      font-size: 16px;
-    --color: black;
-    text-transform: capitalize;
-  }
-  
-  ion-content{
-    z-index: 10;
-    position: absolute;
-    --background: rgba(1,1,1,0);
-  }
-  
-  .conten-section{
-    margin-bottom: 38%;
-    background-color: white;
-    width: 100%;
-    padding-top: 10%;
-    padding-right: 15px;
-    padding-left: 15px;
-    border-radius: 50px 50px 0px 0px;
-  }
+color: black;
+}
+
+ion-content{
+z-index: 1;
+position: absolute;
+--background: rgba(1, 1, 1, 0);
+}
+
+.navigation {
+font-size: 16px;
+--color: black;
+text-transform: capitalize;
+}
+
+ion-content{
+z-index: 10;
+position: absolute;
+--background: rgba(1,1,1,0);
+}
+
+.conten-section{
+margin-bottom: 38%;
+background-color: white;
+width: 100%;
+padding-top: 10%;
+padding-right: 15px;
+padding-left: 15px;
+border-radius: 50px 50px 0px 0px;
+}
 
 .like-news{
-  display: inline-flex;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  box-shadow: none;
-  background-color: rgba(1, 1, 1, 0);
+display: inline-flex;
+margin-top: 0px;
+margin-bottom: 0px;
+box-shadow: none;
+background-color: rgba(1, 1, 1, 0);
 }
- 
-.like-news > ion-card-content{
-  padding: 10px 10px 10px 0px;
-}
-  
-  .news-img{
-    overflow: hidden;
-    min-width: 45%;
-    max-width: 45%;
-    margin: 4px 0 0 0;
-  }
 
-  
-  .img-news{
-    height: 135px;
-    width: 100%;
-    border-radius: 20px;
-    padding: 10px 10px 10px 10px;
-    margin: 0px;
-    object-fit: cover;
-  }
-  
-  .news-title{
-    font-size: 13px;
-    font-weight: 700;
-    color: black;
-  }
-  
-  .news-content{
-    font-size: 11px;
-    text-align: justify;
-    text-justify: inter-word;
-  }
-  
-  ion-anchor {
-    transition: all 500ms ease-in-out;
-    display: block;
-    text-align: center;
-    font-weight: 300;
-   color:red;
-   font-size: 14px;
-  }
-  
-  ion-anchor:hover {
-    border: 2px;
-    border-color: #F00;
-    color: #be79ff;
-  }
+.like-news > ion-card-content{
+padding: 10px 10px 10px 0px;
+}
+
+.news-img{
+overflow: hidden;
+min-width: 45%;
+max-width: 45%;
+margin: 4px 0 0 0;
+}
+
+
+.img-news{
+height: 135px;
+width: 100%;
+border-radius: 20px;
+padding: 10px 10px 10px 10px;
+margin: 0px;
+object-fit: cover;
+}
+
+.news-title{
+font-size: 13px;
+font-weight: 700;
+color: black;
+}
+
+.news-content{
+font-size: 11px;
+text-align: justify;
+text-justify: inter-word;
+}
+
+ion-anchor {
+transition: all 500ms ease-in-out;
+display: block;
+text-align: center;
+font-weight: 300;
+color:red;
+font-size: 14px;
+}
+
+ion-anchor:hover {
+border: 2px;
+border-color: #F00;
+color: #be79ff;
+}

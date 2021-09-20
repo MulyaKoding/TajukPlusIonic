@@ -9,6 +9,12 @@ ion-content{
   position:absolute ;
 }
 
+
+
+ion-item{
+  width: 100%;
+}
+
 .content-section {
   margin-top: 1%;
   background-color: white;
@@ -89,7 +95,7 @@ ion-anchor {
 }
 
 ion-select {
-  width: 97%;
+  width: 100%;
   margin-top: 20px;
   margin-bottom: 12px;
   padding: 15px;
@@ -97,8 +103,23 @@ ion-select {
   background-color: rgba(231, 231, 231, 0.5);
   text-indent: 20px;
   transition: all 400ms ease-out;
+  
 }
 
+.provinsi{
+  padding-left: 5%;
+  color:#55BF30
+}
+
+.kota{
+  padding-left: 5%;
+  color: #55BF30;
+}
+
+.kecamatan{
+  padding-left: 5%;
+  color: #55BF30;
+}
 
 ion-select:hover{
   box-shadow: 0px 0px 4px #3DBDCF, 0px 0px 4px #55BF30;

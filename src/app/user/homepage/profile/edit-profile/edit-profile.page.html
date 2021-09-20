@@ -14,30 +14,35 @@
 
   <div class="content-section">
      <form [formGroup]="changeUser" (ngSubmit)="changeForm()" novalidate>
-        <ion-label class="informasi-data-title">Informasi Data</ion-label>
+        <ion-label class="informasi-data-title" position="floating">Informasi Data</ion-label>
         <div class="informasi-data-border"></div><br> 
-        <ion-input type="text" formControlName="username" placeholder="Username"> {{this.userData.username}} </ion-input>
-        <ion-input type="email" formControlName="email" placeholder="Email"> {{this.userData.email}} </ion-input>
-        <ion-input type="phone" formControlName="phone" placeholder="Phone">{{this.userData.phone}}</ion-input>
-        <ion-input type="text" formControlName="noktp" placeholder="No KTP">{{this.userData.ktp}}</ion-input>
+        <ion-input type="text" value="{{this.userData.username}}" formControlName="username" placeholder="Username"> </ion-input>
+        <ion-input type="email" formControlName="email" value="{{this.userData.email}}" placeholder="Email"></ion-input>
+        <ion-input type="phone" formControlName="phone" value="{{this.userData.phone}}" placeholder="Phone"></ion-input>
+        <ion-input type="text" formControlName="noktp" value="{{this.userData.ktp}}"placeholder="No KTP"></ion-input>
+        
+        <ion-label class="provinsi">Hint: {{this.selectedProvince.name}} </ion-label>
+        <ion-select placeholder=" Pilih Provinsi" formControlName="provinsi" (click)="loadProvinces()"selected>
+        <ion-select-option  value="{{province.id}}" *ngFor="let province of provinces">  {{province.name}} </ion-select-option>
+        </ion-select>
+        
+        <ion-label class="kota">Hint: {{userData.city}}</ion-label>
+        <ion-select  placeholder="Pilih Kota" formControlName="kota" (click)="loadCities()"selected>
+        <ion-select-option value="{{city.id}}" *ngFor="let city of cities">{{city.name}}</ion-select-option>
+        </ion-select>
+
+        <ion-label class="kecamatan">Hint: {{this.userData.district}}</ion-label>
+        <ion-select placeholder="Pilih Kecamatan" formControlName="kecamatan" (click)="loadDistricts()"selected>
+        <ion-select-option value="{{district.id}}" *ngFor="let district of districts">{{district.name}}</ion-select-option>
+        </ion-select>
+
+
+       <ion-button type="submit"class="btn-ubh-profil" expand="block"> Ubah Profil </ion-button>
       
-         <ion-select placeholder="Pilih Provinsi" formControlName="provinsi" (click)="loadProvinces()"selected>
-              <ion-select-option value="{{province.id}}" *ngFor="let province of provinces">{{province.name}}</ion-select-option>
-         </ion-select>
-
-        <ion-select placeholder="Pilih Kota" formControlName="kota" (click)="loadCities()">
-            <ion-select-option value="{{city.id}}" *ngFor="let city of cities">{{city.name}}</ion-select-option>
-        </ion-select>
-
-        <ion-select placeholder="Pilih Kecamatan" formControlName="kecamatan" (click)="loadDistricts()">
-          <ion-select-option value="{{district.id}}" *ngFor="let district of districts">{{district.name}}</ion-select-option>
-        </ion-select>
-
-      <ion-button type="submit"class="btn-ubh-profil" expand="block" >Ubah Profil</ion-button>
     </form>
 
     <form [formGroup]="changePassword" (ngSubmit)="changeNewPassword()" novalidate>
-      <ion-label class="Ganti-Password-title">Ganti Password</ion-label>
+      <ion-label class="Ganti-Password-title">Ganti Password</ion-label>  
       <div class="Ganti-Password-border"></div><br>
       <ion-input type="password" formControlName="lastpass" placeholder="Password Lama"></ion-input>
       <ion-input type="password" formControlName="password" placeholder="Password Baru"></ion-input>

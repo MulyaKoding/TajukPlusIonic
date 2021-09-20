@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Toast } from '@capacitor/toast';
-import { ModalController, NavParams, ToastController } from '@ionic/angular';
+import { IonSelect, ModalController, NavParams, ToastController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { AuthenticationService } from 'src/app/services/authentication/authentication.service';
 
@@ -31,26 +31,32 @@ interface UserData {
   phone: number
   type: number
   ktp: number
-  province: string
-  city: string
-  district: string
+  province: number
+  city: number
+  district: number
   password:string
 }
+
+
 
 @Component({
   selector: 'app-edit-profile',
   templateUrl: './edit-profile.page.html',
   styleUrls: ['./edit-profile.page.scss'],
 })
+
 export class EditProfilePage implements OnInit {
   changeUser: FormGroup
   changePassword: FormGroup
   // endPoint = 'http://10.0.2.2:8000/api/' // <=== Testing APPS
   endPoint = 'http://127.0.0.1:8000/api/' // <=== Testing WebView
-  userData: UserData[] = []
+  userData: UserData [] =[]
   provinces: Province[] = []
   cities: City[] = []
   districts: District[] = []
+  selectedProvince: Province
+  selectedCity: City
+  selectedDistrict: District
 
   constructor(
       private formBuilder: FormBuilder,
@@ -85,10 +91,21 @@ export class EditProfilePage implements OnInit {
       password: ['',[Validators.required]],
       confirmpass: ['',[Validators.required]]
     })
+
     this.http.get(this.endPoint + 'provinces').subscribe(
       data => {
         if(data['success'] == true){
           this.provinces = data['data']
+          this.provinces.forEach(province =>{
+            if( province.id ==  this.userData["province"]){
+                this.selectedProvince = province
+              }
+          })
+          console.log(this.selectedProvince)    
+          Toast.show({
+            text: 'lokasi provinsi user'
+          })
+          
         } else {
           this.provinces = null
           Toast.show({
@@ -105,7 +122,8 @@ export class EditProfilePage implements OnInit {
         this.router.navigateByUrl('/edit-profile')
       }
     )
-  }
+    
+   }
 
   loadProvinces(){
       this.changeUser.get('kota').setValue(0)
