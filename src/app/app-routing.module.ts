@@ -37,10 +37,6 @@ const routes: Routes = [
     loadChildren: () => import('./user/homepage/profile/bookmarks/bookmarks.module').then( m => m.BookmarksPageModule)
   },
   {
-    path: 'followed-groups',
-    loadChildren: () => import('./user/homepage/profile/followed-groups/followed-groups.module').then( m => m.FollowedGroupsPageModule)
-  },
-  {
     path: 'settings',
     loadChildren: () => import('./user/homepage/profile/settings/settings.module').then( m => m.SettingsPageModule)
   },

@@ -12,7 +12,6 @@
     </ion-toolbar>
   </ion-header>
 
-
   <ion-card class="like-news">
     <div class="news-img">
       <img src="assets/images/news/news1.jpeg" class="img-news">
@@ -22,7 +21,7 @@
       <p class="news-content">Jakarta, CNN Indonesia. Indonesia menduduki posisi keempat kasus positif Covid-19 terbanyak di Asia menurut data Worldometers per 31 Juli dan 1 Agustus 2021.
         Pada Sabtu (31/7) kemarin, total kasus positif Covid-19 yang tercatat di Indonesia ada 3.409.658 dengan kasus tambahan 37.284 kasus.</p>
         <ion-anchor (click)="btnClick()">Hapus Favorit</ion-anchor>
-      </ion-card-content>
+    </ion-card-content>
   </ion-card>
 
   <ion-card class="like-news">
@@ -83,4 +82,28 @@
       </ion-card-content>
   </ion-card>
 
+  <ion-tabs>
+    <ion-tab-bar>
+      <ion-tab-button tab="beranda" (click)="newsberanda()">
+        <ion-icon name="tab-beranda-active" ></ion-icon>
+        <ion-label class="label-tab-bar">Beranda</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="video">
+        <ion-icon name="tab-video-inactive"></ion-icon>
+        <ion-label class="label-tab-bar">Video</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="bookmarks" (click)="bookmarks()">
+        <ion-icon name="tab-recruitment-inactive"></ion-icon>
+        <ion-label class="label-tab-bar">Favorite News</ion-label>
+      </ion-tab-button> 
+      <ion-tab-button tab="chat">
+        <ion-icon name="tab-chat-inactive"></ion-icon>
+        <ion-label class="label-tab-bar">Chat</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="profil" (click)="newsDetail()">
+        <ion-icon name="book"></ion-icon>
+        <ion-label class="label-tab-bar">News Detail</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>

@@ -36,10 +36,12 @@ export class HomepagePage implements OnInit {
     })
   }
 
-
-  
   profile() {
     // this.authService.logout()
-    this.router.navigate(['bookmarks'])
+    this.router.navigate(['edit-profile'])
+  }
+
+  btnNews(){
+    this.router.navigate(['/news'])
   }
 }

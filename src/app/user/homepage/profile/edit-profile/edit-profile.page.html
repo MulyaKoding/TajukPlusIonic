@@ -22,7 +22,12 @@
         <ion-input type="text" formControlName="noktp" value="{{this.userData.ktp}}"placeholder="No KTP"></ion-input>
         
         <ion-label class="provinsi">Hint: {{this.selectedProvince.name}} </ion-label>
-        <ion-select placeholder=" Pilih Provinsi" formControlName="provinsi" (click)="loadProvinces()"selected>
+        <ion-select 
+        placeholder=" Pilih Provinsi" 
+        formControlName="provinsi" 
+        (click)="loadProvinces()"
+        name="selectedProvince">
+        
         <ion-select-option  value="{{province.id}}" *ngFor="let province of provinces">  {{province.name}} </ion-select-option>
         </ion-select>
         
@@ -36,9 +41,7 @@
         <ion-select-option value="{{district.id}}" *ngFor="let district of districts">{{district.name}}</ion-select-option>
         </ion-select>
 
-
        <ion-button type="submit"class="btn-ubh-profil" expand="block"> Ubah Profil </ion-button>
-      
     </form>
 
     <form [formGroup]="changePassword" (ngSubmit)="changeNewPassword()" novalidate>
@@ -49,5 +52,6 @@
       <ion-input type="password" formControlName="confirmpass" placeholder="Konfirmasi Password"></ion-input>
       <ion-button type="submit" class="btn-ubh-pswd" expand="block">Ubah Password</ion-button>
     </form>
+
   </div>
 </ion-content>

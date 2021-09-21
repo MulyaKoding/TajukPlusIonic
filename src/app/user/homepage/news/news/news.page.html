@@ -1,9 +1,109 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>news</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content padding fixed>
+  <ion-header>
+    <ion-toolbar class="header-section">
+      <ion-buttons slot="start">
+        <ion-button color="primary">
+          <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button class="navigation">News</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-card class="like-news">
+    <div class="news-img">
+      <img src="assets/images/news/news1.jpeg" class="img-news">
+    </div>
+    <ion-card-content>
+      <p class="news-title">Kasus Aktif Covid 19 Indonesia Terbanyak ke-4 di Asia</p>
+      <p class="news-content">Jakarta, CNN Indonesia. Indonesia menduduki posisi keempat kasus positif Covid-19 terbanyak di Asia menurut data Worldometers per 31 Juli dan 1 Agustus 2021.
+        Pada Sabtu (31/7) kemarin, total kasus positif Covid-19 yang tercatat di Indonesia ada 3.409.658 dengan kasus tambahan 37.284 kasus.</p>
+        <ion-anchor (click)="btnClick()">Tambah Favorit</ion-anchor>
+    </ion-card-content>
+  </ion-card>
 
-<ion-content>
+  <ion-card class="like-news">
+    <div class="news-img">
+      <img src="assets/images/news/news2.jpeg" class="img-news">
+    </div>
+    <ion-card-content>
+      <p class="news-title">Kisah-kisah Pilu Bocah yang jadi Yatim piatu akibat corona</p>
+      <p class="news-content">Solo,Pandemi virus Corona atau COVID-19 telah merenggut nyawa banyak orang. Tak sedikit anak-anak menjadi yatim piatu karena dua orang tuanya meninggal dunia usai COVID-19.
+        detikcom merangkum sejumlah kisah pilu bocah yang kehilangan orang tuanya di wilayah Jawa Tengah dan Daerah Istimewa Yogyakarta (DIY).</p>
+        <ion-anchor (click)="btnClick()">Tambah Favorit</ion-anchor>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card class="like-news">
+    <div class="news-img">
+      <img src="assets/images/news/news3.jpg" class="img-news">
+    </div>
+    <ion-card-content>
+      <p class="news-title">Cantiknya Pebulutangkis Myanmar diOlimpiade 2020, Dipuji netizen Indonesia</p>
+      <p class="news-content">Tokyo,Thet Htar Thuzar dari Myanmar, lawan tunggal putri Indonesia Gregoria Mariska Tunjung dibulutangkis Olimpiade 2020, sukses bikin netizen Indonesia salah fokus. Bukan karena teknik permainannya, melainkan parasnya.Gregoria Mariska mengalahkan Thet Htar Thuzar dari myanmar. namun tetapi banyak netizen indonesia memuji pemain myanmar karna keparasan yang dimilikinya.</p>
+      <ion-anchor (click)="btnClick()">Tambah Favorit</ion-anchor>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="like-news">
+    <div class="news-img">
+      <img src="assets/images/news/news4.jpeg" class="img-news">
+    </div>
+    <ion-card-content>
+      <p class="news-title">Periode PPKM Berakhir Besok, sudah meresakan 'Dine In' maksimal 20 menit</p>
+      <p class="news-content">Jakarta - Salah satu aturan terbaru PPKM level 4 memperbolehkan makan di warung, maksimal selama 20 menit. Hal ini pun menjadi pembahasan warganet di media sosial karena dirasa terlalu sebentar..</p>
+      <ion-anchor (click)="btnClick()">Tambah Favorit</ion-anchor>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="like-news">
+    <div class="news-img">
+      <img src="assets/images/news/news5.jpeg" class="img-news">
+    </div>
+    <ion-card-content>
+      <p class="news-title">Vakin jadi syarat kegiatan warga DKI, Bagaimana bila belum bisa divaksinasi</p>
+      <p class="news-content">Jakarta,Gubernur DKI Jakarta Anies Baswedan berencana membuka sejumlah kegiatan masyarakat dengan syarat sudah divaksinasi. Lantas, bagaimana dengan warga yang belum bisa divaksinasi karena punya komorbid atau baru sembuh dari Corona?</p>
+      <ion-anchor (click)="btnClick()">Tambah Favorit</ion-anchor>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="like-news">
+    <div class="news-img">
+      <img src="assets/images/news/news6.jpeg" class="img-news">
+    </div>
+    <ion-card-content>
+      <p class="news-title">Kronologi Rafi ahmad terpapar Covid-19, tertular dari Rafathar-Nagita Slavina</p>
+      <p class="news-content">
+        Jakarta Ternyata bukan cuma Raffi Ahmad yang terpapar COVID-19 pada bulan lalu. Rafathar Malik Ahmad ternyata yang paling awal kena COVID-19. Raffi Ahmad menceritakan awal mula dirinya terpapar COVID-19. Dia menceritakan dirinya masih negatif saat Rafathar Malik Ahmad dan Nagita Slavina terpapar COVID-19.</p>
+        <ion-anchor (click)="btnClick()">Tambah Favorit</ion-anchor>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-tabs>
+    <ion-tab-bar>
+      <ion-tab-button tab="beranda" (click)="beranda()" >
+        <ion-icon name="tab-beranda-active" ></ion-icon>
+        <ion-label class="label-tab-bar">Beranda</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="video">
+        <ion-icon name="tab-video-inactive"></ion-icon>
+        <ion-label class="label-tab-bar">Video</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="bookmarks" (click)="bookmarks()">
+        <ion-icon name="tab-recruitment-inactive"></ion-icon>
+        <ion-label class="label-tab-bar">Favorite News</ion-label>
+      </ion-tab-button> 
+      <ion-tab-button tab="chat">
+        <ion-icon name="tab-chat-inactive"></ion-icon>
+        <ion-label class="label-tab-bar">Chat</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="profil" (click)="newsDetail()">
+        <ion-icon name="book"></ion-icon>
+        <ion-label class="label-tab-bar">News Detail</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 
 </ion-content>

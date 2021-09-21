@@ -37,8 +37,6 @@ interface UserData {
   password:string
 }
 
-
-
 @Component({
   selector: 'app-edit-profile',
   templateUrl: './edit-profile.page.html',
@@ -57,7 +55,7 @@ export class EditProfilePage implements OnInit {
   selectedProvince: Province
   selectedCity: City
   selectedDistrict: District
-
+  
   constructor(
       private formBuilder: FormBuilder,
       private storage: Storage,
@@ -101,6 +99,7 @@ export class EditProfilePage implements OnInit {
                 this.selectedProvince = province
               }
           })
+          // this.loadProvinces(this.selectedProvince,data);
           console.log(this.selectedProvince)    
           Toast.show({
             text: 'lokasi provinsi user'
@@ -122,7 +121,6 @@ export class EditProfilePage implements OnInit {
         this.router.navigateByUrl('/edit-profile')
       }
     )
-    
    }
 
   loadProvinces(){
