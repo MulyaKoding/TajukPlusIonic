@@ -15,48 +15,46 @@
 
   <div class="content-section">
   <center>
-    <img src="assets/images/news/news15.jpeg" class="data-img-bckgrnd">
+    <img src="assets/images/news/news_1.jpg" class="data-img-bckgrnd">
   </center>
   <ion-chip class="topic">
-    <ion-label>Covid 19</ion-label>
+    <ion-label>News</ion-label>
   </ion-chip>
 
-  <p class="title-news">Menanti Nasib PPKM Level 4 Usai Evaluasi Hati-Hati</p>
+  <p class="title-news">Ada Gunung Emas Raksasa di Dekat Grasberg, Kok Malah Ditinggal Freeport?</p>
 
   <div class="section-profil-img">
     <img src="assets/images/news/profil.jpg " class="img-profil">
     <p class="profil-image">Agnes Mo</p>
-
     <h1 class="content-time">10 Menit yang Lalu
       <ion-icon class="icon-share" name="share" isActive="false"></ion-icon> 
-      <h7>50</h7>
+      <h7>100</h7>
       <ion-icon class="icon-eye" name="eye" isActive="false"></ion-icon> 
-      <h7>50</h7>
+      <h7>150</h7>
       <ion-icon class="icon-heart" name="heart" isActive="false"></ion-icon>
-      <h7>50</h7>
+      <h7>450</h7>
       <ion-icon class="icon-chat" name="chatbubbles" isActive="false"></ion-icon>
-      <h7>50</h7>
+      <h7>250</h7>
     </h1>
     <div class="border"></div>
-    <h2 class="news-information-main">Jakarta - Masa perpanjangan PPKM level 4 berakhir hari ini. Keputusan resmi mengenai lanjut atau tidaknya PPKM level 4 bakal diumumkan pemerintah setelah melakukan evaluasi secara hati-hati.</h2>
-    <h3 class="news-information-topic">Dalam rapat terbatas bersama para gubernur, Presiden Joko Widodo (Jokowi) sudah mewanti-wanti soal lonjakan kasus COVID-19 yang mulai bergeser ke luar Jawa dan Bali. 
-      Jokowi meminta penanganan dilakukan secara cepat."Respons cepat, karena kelihatannya ini terjadi pergeseran lonjakan dari Jawa Bali menuju ke luar Jawa-Bali,
-      " kata Jokowi dalam rapat yang disiarkan dalam YouTube Sekretariat Presiden, Sabtu (7/8).</h3>
+    <h2 class="news-information-main">Bukan hanya Grasberg, masih ada wilayah lain yang kaya akan emas di Papua, yaitu Blok Wabu di Kabupaten Intan Jaya. Lokasinya berjarak 40 kilometer di sebelah utara Grasberg. Dulunya, Blok Wabu masuk dalam wilayah tambang PT Freeport Indonesia berdasarkan Kontrak Karya (KK) yang ditandatangani pada 1991.</h2>
+    <h3 class="news-information-topic">Dalam KK tersebut, luas wilayah eksplorasi Freeport mencapai 200 ribu hektare yang terdiri dari Blok A dan Blok B. Wabu termasuk dalam Blok B, sedangkan Grasberg masuk dalam Blok A. 
+      Saat melakukan eksplorasi, Freeport sebenarnya menemukan kandungan emas yang menjanjikan di Blok Wabu. Berdasarkan pendataan yang dilakukan saat itu, potensi sumber dayanya mencapai 8,1 juta troy ounce. Tapi pada akhirnya, wilayah itu tak dijamah dan malah dilepaskan oleh Freeport. Padahal Freeport sudah mengeluarkan biaya besar, sekitar US 170 juta, untuk eksplorasi Blok Wabu.
+    </h3>
+    <h4 class="news-information-end">Hingga saat ini, belum diketahui siapa yang akan mengelola gunung emas Blok Wabu ini. Saat ditanya apakah pemerintah pernah meminta Freeport untuk mengelola Blok Wabu ini, Tony mengaku tidak pernah. Menurut Tony, siapa pun yang nanti mengelola Blok Wabu, akan memperoleh tantangan berat, karena hingga saat ini tidak ada akses atau jalur yang memadai menuju blok tersebut.
+    </h4>
     </div>
-    
+
   <ion-chip class="status-inside">
-    <div class="container-ls">
-      <ion-icon  size="large" class="icon-heart-status" name="heart" isActive="false"></ion-icon>
-      <p class="text-like">Suka</p>
-    </div>
-    <div class="container-cs">
-      <ion-icon size="large" class="icon-heart-chatbubbles" name="chatbubbles" isActive="false"></ion-icon>
-      <p class="text-komentar">Komentar</p>
-    </div>
-    <div class="container-rs">
-      <ion-icon size="large" class="icon-heart-share" name="share" isActive="false"></ion-icon>
-      <p class="text-bagikan">Bagikan</p>
-    </div>
+
+    <ion-icon (click)="like()" size="large" class="icon-heart-status" name="suka" isActive="false"></ion-icon>
+    <p class="text-like">Suka</p>
+  
+    <ion-icon (click)="comment()"size="large" class="icon-heart-chatbubbles" name="komentar" isActive="false"></ion-icon>
+    <p class="text-komentar">Komentar</p>
+  
+    <ion-icon (click)="share()" size="large" class="icon-heart-share" name="bagikan" isActive="false"></ion-icon>
+    <p class="text-bagikan">Bagikan</p>
   </ion-chip>
   
   <div class="section-tags-news">
@@ -66,13 +64,13 @@
   </div>
 
   <ion-segment scrollable class="tag-news">
-    <ion-button tab="1" class="tag-btn-news">Tag 1</ion-button>
-    <ion-button tab="2" class="tag-btn-news">Tag 2</ion-button>
-    <ion-button tab="3" class="tag-btn-news">Tag 3</ion-button>
-    <ion-button tab="4" class="tag-btn-news">Tag 4</ion-button>
-    <ion-button tab="5" class="tag-btn-news">Tag 5</ion-button>
-    <ion-button tab="6" class="tag-btn-news">Tag 6</ion-button>
-    <ion-button tab="7" class="tag-btn-news">Tag 7</ion-button>
+    <ion-button tab="1" class="tag-btn-news">{{news}} #yeni </ion-button>
+    <ion-button tab="2" class="tag-btn-news">{{news}} #covid-19</ion-button>
+    <ion-button tab="3" class="tag-btn-news">{{news}} #andiansyah</ion-button>
+    <ion-button tab="4" class="tag-btn-news">{{news}} #Khoerunissa</ion-button>
+    <ion-button tab="5" class="tag-btn-news">{{news}} #Ridwan</ion-button>
+    <ion-button tab="6" class="tag-btn-news">{{news}} #kamila</ion-button>
+    <ion-button tab="7" class="tag-btn-news">{{news}} #rico</ion-button>
   </ion-segment>
 
   <div class="section-information-news">
@@ -207,9 +205,9 @@
       <ion-label class="label-tab-bar">Chat</ion-label>
     </ion-tab-button>
     <ion-tab-button tab="profil" (click)="newsDetail()">
-      <ion-icon name="book"></ion-icon>
+      <ion-icon class="berita-detail" name="berita-detail"></ion-icon>
       <ion-label class="label-tab-bar">News Detail</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
-</ion-tabs>
+ </ion-tabs>
 </ion-content>

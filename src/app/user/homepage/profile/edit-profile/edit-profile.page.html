@@ -22,12 +22,7 @@
         <ion-input type="text" formControlName="noktp" value="{{this.userData.ktp}}"placeholder="No KTP"></ion-input>
         
         <ion-label class="provinsi">Hint: {{this.selectedProvince.name}} </ion-label>
-        <ion-select 
-        placeholder=" Pilih Provinsi" 
-        formControlName="provinsi" 
-        (click)="loadProvinces()"
-        name="selectedProvince">
-        
+        <ion-select placeholder=" Pilih Provinsi"  formControlName="provinsi" (click)="loadProvinces()" selected>
         <ion-select-option  value="{{province.id}}" *ngFor="let province of provinces">  {{province.name}} </ion-select-option>
         </ion-select>
         
