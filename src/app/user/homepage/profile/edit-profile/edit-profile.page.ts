@@ -101,7 +101,9 @@ export class EditProfilePage implements OnInit {
                 this.selectedProvince = province
               }
           })
+          
           // this.loadProvinces(this.selectedProvince,data);
+
           console.log(this.selectedProvince)    
           Toast.show({
             text: 'lokasi provinsi user'

@@ -10,6 +10,7 @@ describe('EndPointService', ()=> {
     });
 
         it('should be created' , () => {
+        const service: EndPointService = TestBed.get(EndPointService);
         expect(service).toBeTruthy();
     });
 });

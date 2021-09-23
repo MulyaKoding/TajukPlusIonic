@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
-import { NewsPageRoutingModule } from './news-routing.module';
-
+import { RouterModule } from '@angular/router';
 import { NewsPage } from './news.page';
 
 @NgModule({
@@ -13,7 +10,12 @@ import { NewsPage } from './news.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    NewsPageRoutingModule
+    RouterModule.forChild([
+      {
+        path: '',
+        component: NewsPage
+      }
+    ])
   ],
   declarations: [NewsPage]
 })
